@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+html, body {
+    margin: 0 80px 0 80px;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #01040A;
+}
+
+
+.main-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.head-txt {
+    scale: 90%;
+    margin-top: 10px;
+    margin-left: -100px;
+    z-index: 1;
+  }
+
+  header {
+    display: flex;
+    width: 1428px;
+    margin-left: 20px; /* Adjust the margin to control spacing */
+}
+
+.head-main {
+    display: flex;
+    flex-direction: column;
+    width: 1428px;
+    justify-content: left;
+    text-align: left;
+}
+  
+.head-but {
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-top: -80px;
+    z-index: 9;
+    
+}
+
+.head-but-1 {
+    color: white;
+    background: linear-gradient(to right, #2980B9, #2C3E50);
+    border-radius: 15rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    cursor: pointer;
+    text-align: left;
+    display: inline-flex; /* Optional: ensures proper alignment of text inside */
+    align-items: center;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth hover effect */
+}
+
+.head-but-1:hover {
+    background: linear-gradient(to right, #2C3E50, #2980B9); /* Bright purple gradient */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
+}
+
+.head-but-1:active {
+    transform: scale(1); /* Reset scaling on click */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+/* robo animation */
+
+.robo-ani {
+    margin-top: 50px; /* Moves the element down */
+    margin-left: -400px; /* Moves the element to the right */
+    z-index: 0;
+    border-top: none;
+    border-bottom: none;
+    scale: 90%;
+  }
+  
+.robo {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: black; /* Change this line */
+    overflow: hidden;
+  }
+  
+  #webgl {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  #webgl2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: 2;
+  }
+  
+  #bg-box {
+    width: 800px;
+    height: 602px;
+    position: absolute;
+    z-index: -1;
+    padding-top: 1px;     /* Shift content down by 1px */
+    padding-bottom: 1px; 
+    background: transparent; /* Change this line */
+  }
+  
+  .svg-box {
+    width: 800px;
+    height: 602px;
+    position: absolute;
+    z-index: 1;
+    background-color: #01040a;
+  
+  }
+  .svg-box #robot {
+    cursor: pointer;
+  }
+  
+

@@ -1,0 +1,99 @@
+
+.nav-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    z-index: 9999;
+    height: 60px;
+}
+
+nav {
+    margin: 30px 20px 20px 20px;
+    z-index: 9999;
+    height: 60px;
+    position: fixed;
+    max-width: 1428px;
+    justify-content: space-between;
+}
+
+
+.bar {
+    justify-content: center;
+    align-items: center;
+    width: 1428px;
+    background-color: #161A21;
+    height: 8.vh;
+    margin: 30px 0px 0px 0px;
+    border-radius: 100px;
+}
+
+
+.bar-ele-but {
+    display: flex;
+    max-width: 1428px;
+    justify-content: space-between;
+    height: 8.7vh;
+    align-items: center; 
+    color: white;
+}
+
+.bar-ele-but h4 {
+    font-weight: 600;
+    
+}
+
+.bar-ele-but .left {
+    justify-content: space-between;
+    align-items: center; 
+    display: flex;
+    gap: 3.5vw;
+    padding-left: 3vw;
+    font: bold;
+    letter-spacing: 1.1px;
+}
+.bar-ele-but .right {
+    justify-content: space-between;
+    align-items: center; 
+    display: flex;
+    gap: 3.5vw;
+    padding-right: 3vw;
+    font: bold;
+    letter-spacing: 1.1px;
+}
+
+.bar-ele-but .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 180%;
+}
+
+.bar-ele-but .center img {
+    scale: 100%;
+    width: auto; /* Ensures image aspect ratio remains intact */
+    height: 40px; /* Adjust to fit your design */
+    object-fit: contain; /* Ensures the image is not stretched */
+}
+
+/* button code signup */
+
+.button {
+    color: white;
+    background-color: #101010;
+    border-radius: 15rem;
+    font-size: 1.1rem;
+    font: bold;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    border: none;
+}
+
+.button:hover {
+    background-color: #3a3a3a;
+}

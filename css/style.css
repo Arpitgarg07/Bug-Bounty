@@ -24,6 +24,7 @@ body {
     justify-content: center;
     align-items: center; 
 }
+
 .head-txt {
     scale: 90%;
     margin-top: 10px;
@@ -31,10 +32,11 @@ body {
     z-index: 1;
   }
 
-  header {
+header {
     display: flex;
     width: 1428px;
-    margin-left: 20px; /* Adjust the margin to control spacing */
+    margin-left: 20px;
+    padding: 10px 20px 0px 20px;
 }
 
 .head-main {
@@ -43,6 +45,7 @@ body {
     width: 1428px;
     justify-content: left;
     text-align: left;
+
 }
   
 .head-but {
@@ -86,12 +89,13 @@ body {
 /* robo animation */
 
 .robo-ani {
-    margin-top: 50px; /* Moves the element down */
-    margin-left: -400px; /* Moves the element to the right */
+    margin-top: 80px; /* Moves the element down */
+    margin-left: -735px; /* Moves the element to the right */
     z-index: 0;
     border-top: none;
     border-bottom: none;
     scale: 90%;
+    max-height: fit-content;
   }
   
 .robo {
@@ -139,4 +143,224 @@ body {
     cursor: pointer;
   }
   
+  .head-tab {
+    background-color: #0c0c0c00; /* Dark background */
+    color: #fff; /* White text */
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    padding-top: 50px;
+    height: 50vh;
+    margin: 0;
+  }
+  
+  .freelancer-organization-table {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    width: 725px; /* Adjust as needed */
+    
+  }
+  
+  .freelancer-section, .organization-section {
+    padding: 20px;
+    border: 1px solid #fff;
+  }
+  
+  .freelancer-section h2, .organization-section h2 {
+    margin: 0 0 10px;
+  }
+  
+  .freelancer-section p, .organization-section p {
+    margin: 0;
+  }
+  
+  .freelancer-organization-table::before,
+  .freelancer-organization-table::after {
+    content: '';
+    position: absolute;
+    border: 5px solid #fff;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .freelancer-organization-table::before {
+    top: -10px;
+    left: -10px;
+    border-bottom: none;
+    border-right: none;
+  }
+  
+  .freelancer-organization-table::after {
+    bottom: -10px;
+    right: -10px;
+    border-top: none;
+    border-left: none;
+  }
+  
+  .gradient-heading-h2 {
+    background: linear-gradient(20deg, #FFFFFF, #999999); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gradient-heading-p {
+    background: linear-gradient(30deg, #FFFFFF, #999999); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
 
+
+  .header-middle {
+    display: flex;
+    justify-content: left;
+    align-self: start;
+    height: 50vh;
+    width: 100%;
+  }
+  .header-middle {
+    width: 1428px;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    height: 40vh;
+}
+
+
+  .header-mid1 {
+    display: flex;
+    width: 50%;
+    margin-left: 20px;
+    justify-content: left;
+    align-self: start;
+    flex-direction: column;
+  }
+
+  .header-mid1 p {
+    font-size: 19px;
+    color: white;
+    padding: 9px;
+  }
+
+  .para-p2 {
+    margin-left: 200px;
+  }
+
+  .para-p1::after {
+    content: '';
+    display: block;
+    width: 42%;
+    height: 4px;
+    background-color: #ffffff;
+    margin-top: 10px; 
+}
+  .para-p2::after {
+    content: '';
+    display: block;
+    width: 75%;
+    height: 3px;
+    background-color: #ffffff;
+    margin-top: 10px; 
+}
+
+
+.header-mid2 {
+  position: absolute;
+  right: -111px;
+  width: 720px;
+  height: 20vh;
+  border: 2px solid white;
+  color: #ffffff;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  padding: 20px; 
+  background-color: #01040A; 
+  border-right: none;
+}
+
+.header-mid2 h2 {
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.email-box-main {
+  padding: 10px;
+}
+
+.email-box {
+  display: flex;
+  color: rgba(255, 255, 255, 0.7);
+  justify-content: center;
+  align-content: center;
+
+}
+
+.email-input {
+  background-color: #000000;
+  color: #ffffff;
+  width: 500px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 22px;
+  text-align-last: auto;
+  border: none;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+  padding-left: 15px;
+}
+
+.email-box button {
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.email-box button:hover {
+  background-color: #ccc;
+}
+
+.email-box button svg {
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  scale: 170%;
+  fill: #000;
+  display: block;
+  margin-left: 4px;
+}
+
+.header-mid2::before {
+  content: '';
+  position: absolute;
+  border: 5px solid #fff;
+  width: 45px;
+  height: 45px;
+}
+
+.header-mid2::before {
+  bottom: -30px;
+  left: -30px;
+  border-top: none;
+  border-right: none;
+}
+
+.vector-1 {
+  position: relative;
+  scale: 60%;
+  margin-top: 31px;
+  left: 395px;
+}

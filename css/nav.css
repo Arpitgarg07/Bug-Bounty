@@ -36,13 +36,14 @@ nav {
     height: 8.7vh;
     align-items: center; 
     color: white;
+
 }
 
 .bar-ele-but h4 {
     font-weight: 600;
+    cursor: pointer;
     
 }
-
 .bar-ele-but .left {
     justify-content: space-between;
     align-items: center; 
@@ -66,7 +67,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    scale: 180%;
+    scale: 200%;
+    cursor: pointer;
 }
 
 .bar-ele-but .center img {

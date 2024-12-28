@@ -48,7 +48,7 @@ nav {
     justify-content: space-between;
     align-items: center; 
     display: flex;
-    gap: 3.5vw;
+    gap: 3.3vw;
     padding-left: 3vw;
     font: bold;
     letter-spacing: 1.1px;
@@ -57,7 +57,7 @@ nav {
     justify-content: space-between;
     align-items: center; 
     display: flex;
-    gap: 3.5vw;
+    gap: 3.3vw;
     padding-right: 3vw;
     font: bold;
     letter-spacing: 1.1px;

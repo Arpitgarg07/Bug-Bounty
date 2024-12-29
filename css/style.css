@@ -8,7 +8,6 @@
 }
 
 html, body {
-    margin: 0 80px 0 80px;
     cursor: default;
 }
 
@@ -38,8 +37,8 @@ body {
 header {
     display: flex;
     width: 1428px;
-    margin-left: 20px;
-    padding: 10px 20px 0px 20px;
+    padding: 10px 20px 10px 20px; 
+    height: 1150px;
 }
 
 .head-main {
@@ -48,6 +47,7 @@ header {
     width: 1428px;
     justify-content: left;
     text-align: left;
+    height: fit-content;
 
 }
   
@@ -92,8 +92,8 @@ header {
 /* robo animation */
 
 .robo-ani {
-    margin-top: 80px; /* Moves the element down */
-    margin-left: -735px; /* Moves the element to the right */
+    margin-top: 80px; 
+    margin-left: -735px;
     z-index: 0;
     border-top: none;
     border-bottom: none;
@@ -103,15 +103,15 @@ header {
   
 .robo {
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     margin: 0;
-    background: black; /* Change this line */
+    background: black; 
     overflow: hidden;
   }
   
   #webgl {
     width: 800px;
-    height: 600px;
+    max-height: fit-content;;
     position: absolute;
     z-index: -1;
   }
@@ -153,7 +153,7 @@ header {
     justify-content: left;
     align-items: start;
     padding-top: 50px;
-    height: 50vh;
+    height: fit-content;
     margin: 0;
   }
   
@@ -219,16 +219,18 @@ header {
     display: flex;
     justify-content: left;
     align-self: start;
-    height: 50vh;
+    height: fit-content;
     width: 100%;
   }
+
   .header-middle {
     width: 1428px;
     position: relative;
     display: flex;
     justify-content: left;
     align-items: flex-start;
-    height: 40vh;
+    height: fit-content;
+    padding-top: 80px;
 }
 
 
@@ -273,7 +275,7 @@ header {
   position: absolute;
   right: -111px;
   width: 720px;
-  height: 20vh;
+  height: 140px;
   border: 2px solid white;
   color: #ffffff;
   display: flex; 
@@ -368,7 +370,124 @@ header {
 .vector-1 {
   position: relative;
   scale: 60%;
-  margin-top: 31px;
-  left: 395px;
+  margin-top: 26px;
+  left: 405px;
   z-index: 0;
+}
+
+
+.mid-page {
+  position: relative;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  padding-top: 18px;
+
+}
+
+.mid-page-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 45px;
+  position: relative;
+
+}
+
+.mid-page-heading h1 {
+  color: white;
+  font-size: 65px;
+
+}
+
+.mid-page-heading img {
+  scale: 55%;
+  position: absolute;
+  justify-content: left;
+  align-items: start;
+  left: 318px;
+  bottom: 20px;
+
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  gap: 3rem;
+  color: #fff;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+/* Card Styling */
+.card {
+  background-color: #01040A;
+  border: 2px solid #ccb6b6;
+  border-radius: 15px;
+  padding: 3rem;
+  width: 400px;
+  height: fit-content;
+  text-align: left;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  position: relative; /* Position for the top line */
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 10px; /* Position below the top border */
+  left: 0px; /* Align with inner padding */
+  right: 0px; /* Match left padding */
+  height: 2px; /* Line thickness */
+  background-color: #ccb6b6; /* Line color */
+}
+
+.card-p1 {
+  padding: 0px 0 70px 0;
+}
+
+
+/* Card Content */
+.card h2 {
+  color: #fff;
+  font-size: 2.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  margin-bottom: 0rem;
+  padding: 0 0 10px 0;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #d3d3d3;
+}
+
+.card span {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ccb6b6;
+}
+
+/* Button Styling */
+.card button {
+  background: linear-gradient(90deg, #4d94ff, #1a73e8);
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 1rem 7.2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0px 18px rgba(77, 148, 255, 0.5);
 }

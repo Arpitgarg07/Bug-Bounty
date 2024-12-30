@@ -727,7 +727,8 @@ label:before {
 
 
 .section-1,
-.section-2 {
+.section-2,
+.section-3 {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -782,6 +783,9 @@ label:before {
 .section-2 .pill.blue {
   background-color: #bbff00; 
 }
+.section-3 .pill.blue {
+  background-color: #FF6B00; 
+}
 
 .pill.cyan {
   width: 90px;
@@ -789,6 +793,9 @@ label:before {
 }
 .section-2 .pill.cyan {
   background-color: #ff006a; 
+}
+.section-3 .pill.cyan {
+  background-color: #00FFF0; 
 }
 
 .container .text-container {
@@ -810,17 +817,22 @@ label:before {
   margin-top: 10px;
 }
 
-.sec1-img {
-  padding: 60px 40px 60px 40px;
-  justify-content: center !important;
-  align-items: center !important;
+.sec1-img,
+.sec3-img {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+  padding: 60px 40px;
+}
+
+.sec3-img {
+  padding: 120px 40px;
 }
 
 .sec1-img img {
-  margin-left: 114px;
-  justify-content: center;
-  align-items: center;
+  margin: 0; /* Remove any margin that might offset the centering */
 }
+
 
 .vector3 {
   position: absolute; /* Change from relative to absolute */

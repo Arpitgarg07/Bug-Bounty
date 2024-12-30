@@ -508,21 +508,26 @@ header {
   font-weight: 500;
 }
 
+/* Ensure no extra margins or paddings for images */
+
+
 .mid-page-middle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: fit-content;
+  max-height: fit-content;
   padding: 70px 0 0 0;
 }
 
-.mid-page-middle .mid-page-middle-heading img {
-  position: absolute;
-  scale: 50%;
-  left: 10px;
-  bottom: 495px;
+.vector1 {
+  position: absolute; /* Change from relative to absolute */
+  transform: scale(0.5) translate(-10px, 495px); /* Combine scale and positioning */
+  top: 480px;
+  left: 0px;
 }
+
 
 .mid-page-middle-heading {
   height: fit-content;
@@ -531,12 +536,12 @@ header {
 }
 
 .mid-page-middle .mid-page-middle-heading h3 {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-weight: 600;
   justify-content: center;
   align-items: center;
   color: #fff;
-  padding: 30px;
+  padding: 40px;
 }
 
 .mid-page-middle-main {
@@ -689,11 +694,11 @@ label:before {
   padding: 25px;
 }
 
-.text-container {
+.mid-page-middle-foot .text-container {
   display: flex;
   align-items: baseline; 
   gap: 13px; 
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   font-weight: bold;
 }
 
@@ -706,8 +711,121 @@ label:before {
 }
 
 .vector2 {
-  position: absolute;
-  scale: 32%;
-  right: -164px;
-  bottom: -31px;
+  position: absolute; /* Change from relative to absolute */
+  transform: scale(0.32) translate(164px, -31px); /* Combine scale and positioning */
+  top: 1085px;
+  right: -130px;
 }
+
+
+.mid-page-foot {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  padding: 120px 40px 50px 40px;
+}
+
+
+.section-1,
+.section-2 {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: fit-content;
+}
+
+.section-2 {
+  align-items: end;
+}
+
+
+.container {
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.number-circle {
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.pill {
+  height: 75px;
+  border-radius: 38px;
+}
+
+.pill.blue {
+  width: 150px;
+  background-color: #007BFF; 
+}
+.section-2 .pill.blue {
+  background-color: #bbff00; 
+}
+
+.pill.cyan {
+  width: 90px;
+  background-color: #00E6E6; /* Cyan pill */
+}
+.section-2 .pill.cyan {
+  background-color: #ff006a; 
+}
+
+.container .text-container {
+  flex-direction: column;
+}
+
+.text-container h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  width: 835px;
+}
+
+.text-container p {
+  font-size: 1.5rem;
+  width: 835px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ccc; /* Slightly lighter text */
+  margin-top: 10px;
+}
+
+.sec1-img {
+  padding: 60px 40px 60px 40px;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.sec1-img img {
+  margin-left: 114px;
+  justify-content: center;
+  align-items: center;
+}
+
+.vector3 {
+  position: absolute; /* Change from relative to absolute */
+  transform: scale(0.32) translate(164px, -31px); /* Combine scale and positioning */
+  top: 2450px;
+  left: -180px;
+}
+

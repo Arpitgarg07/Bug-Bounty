@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; 
+    overflow: hidden;
 
 }
 
@@ -377,13 +378,13 @@ header {
 }
 
 
-.mid-page {
+.mid-page,
+.mid-page2 {
   position: relative;
   height: fit-content;
   justify-content: center;
   align-items: center;
   padding-top: 18px;
-
 }
 
 .mid-page-heading {
@@ -840,4 +841,290 @@ label:before {
   top: 2450px;
   left: -180px;
 }
+.vector4 {
+  position: absolute; /* Change from relative to absolute */
+  transform: scale(0.55) translate(164px, -31px); /* Combine scale and positioning */
+  top: 3600px;
+  left: 900px;
+}
+.vector5 {
+  position: absolute;
+  transform: scale(0.35) translate(164px, -31px);
+  top: 4630px;
+  z-index: 9;
+  left: -120px;
+}
+.vector6 {
+  position: absolute;
+  transform: scale(0.5) translate(164px, -31px);
+  top: 5400px;
+  z-index: 9;
+  left: -120px;
+}
+.discord-vec {
+  position: absolute;
+  transform: scale(0.4) translate(164px, -31px);
+  z-index: 9;
+  top: 4891px;
+  right: -155px;
+}
 
+.mid-page-foot-discord {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: fit-content;
+  padding: 10px 0 170px 0;
+  width: 1428px;
+}
+
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1428px;
+  gap: 100px;
+}
+
+.logo-container {
+  flex: 1;
+  transform: scale(5.6) rotate(-20deg);
+  text-align: center;
+  margin: 20px;
+  z-index: 0;
+}
+
+.content-container {
+  flex: 1;
+  margin: 20px;
+  z-index: 9;
+}
+
+.content-container h1 {
+  font-size: 5rem;
+  line-height: 6.2rem;
+  font-weight: bolder;
+  font-style: italic;
+}
+.content-container br {
+  line-height: 6.2rem;
+}
+
+
+.content-container p {
+  margin: 15px 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px 50px;
+  background: linear-gradient(to right, #3D4E81, #5753C9, #6E7FF3);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth hover effect */
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #6E7FF3, #5753C9, #3D4E81); /* Bright purple gradient */
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add a shadow */
+}
+
+.btn:active {
+  transform: scale(1); /* Reset scaling on click */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+/* Animation styles */
+.discord-logo {
+  transform: scale(0.7);
+  transform-origin: 24px 24px;
+}
+
+.discord-logo.swirl-animation .discord-outer-layer {
+  transition: transform 800ms cubic-bezier(0.7, 1, 0.7, 1);
+  transform-origin: 50% 50%;
+}
+
+.discord-logo-container:hover .swirl-animation .discord-outer-layer {
+  transform: scale(1.5) rotate(360deg);
+}
+
+.discord-logo.swirl-animation .discord-middle-layer {
+  transition: transform 800ms cubic-bezier(0.5, 1, 0.5, 1);
+  transform-origin: 50% 50%;
+}
+
+.discord-logo-container:hover .swirl-animation .discord-middle-layer {
+  transform: scale(1.4) rotate(360deg);
+}
+
+.discord-logo.swirl-animation .discord-inner-layer {
+  transition: transform 800ms cubic-bezier(0.3, 1, 0.3, 1);
+  transform-origin: 50% 50%;
+}
+
+.discord-logo-container:hover .swirl-animation .discord-inner-layer {
+  transform: scale(1.3) rotate(360deg);
+}
+
+.discord-logo.swirl-animation .discord-original {
+  transition: visibility 0ms;
+  transition-delay: 800ms;
+}
+
+.discord-logo-container:hover .swirl-animation .discord-original {
+  visibility: hidden;
+  transition-delay: 0ms;
+}
+
+
+
+
+.mid-page-foot-faq {
+  position: relative;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 60px 80px 60px;
+  height: fit-content;
+}
+
+.faq-section-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  height: 536px;
+}
+
+.faq-section {
+  width: 1100px;
+  display: flex;
+  border: 1px solid #FFFFFF;
+}
+
+.faq-section-text {
+  position: absolute;
+  letter-spacing: 0.15rem;
+  font-size: 1.4rem;
+  top: 107px;
+  left: -126px;
+}
+
+.questions-box {
+  position: absolute;
+  display: inline-block;
+  padding: 14px 35px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  top: 252px;
+  left: -124px;
+  color: white;
+  background-color: #00000000;
+  border: 2px solid white;
+  clip-path: polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
+}
+
+.faq-section-text h1 {
+  font-weight: 600;
+}
+.faq-section-text .guru {
+  font-weight: bolder;
+  font-size: 4rem;
+}
+
+.faq-top {
+  flex: 1;
+  border: 1px solid #FFFFFF;
+  width: 504px;
+  max-height: 90px;
+  display: flex;
+  flex-direction: column;
+  background-color: #15151500;
+  border-bottom: none;
+  justify-content: right;
+  align-items: end;
+}
+
+.faq-top-right {
+  border: 1px solid #FFFFFF;
+  width: 90px;
+  max-height: 90px;
+  background-color: #15151500;
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+  align-items: center !important;
+}
+
+.faq-left {
+  flex: 1;
+  padding: 35px;
+  display: flex;
+  width: 413.34px;
+  flex-direction: column;
+  justify-content: center; /* Centers other content vertically */
+  align-items: baseline; /* Aligns items horizontally to the baseline */
+  background-color: #15151500;
+  border-right: 1px solid #FFFFFF;
+}
+
+.faq-left p {
+  font-size: 1.2rem;
+  margin: auto 0px 25px 0px;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+
+.faq-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  padding: 20px;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h3 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.faq-item p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.quote-icon {
+  font-size: 120px;
+  font-weight: bolder;
+  margin: 0 15px 0 15px;
+}
+
+.faq-vec {
+  position: absolute;
+  transform: scale(0.5) translate(164px, -31px);
+  top: -135px;
+  right: -220px;
+}

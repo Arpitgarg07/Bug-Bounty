@@ -681,6 +681,7 @@ label:before {
 .mid-page-middle-foot {
   color: white; 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: fit-content;
@@ -702,4 +703,11 @@ label:before {
   border-bottom: 5px solid blue; 
   position: relative;
   top: 0.2em; 
+}
+
+.vector2 {
+  position: absolute;
+  scale: 32%;
+  right: -164px;
+  bottom: -31px;
 }

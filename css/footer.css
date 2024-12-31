@@ -1,0 +1,118 @@
+footer {
+    background-color: #1a1a1a00;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 25px 130px 45px 130px;
+  }
+  
+  .footer-logo img {
+    width: 110px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .footer-txt-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-text h3 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    font-weight: 800;
+  }
+  
+  .footer-text .blue {
+    color: #00D1FF;
+  }
+  
+  .footer-text .orange {
+    color: #FF5C00;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 66px;
+  }
+  
+  .footer-links div {
+    flex: 1;
+    padding: 0 10px;
+    width: 160px;
+  }
+  
+  .footer-links h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a {
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-links ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .footer-bottom p {
+    margin: 10px 0;
+  }
+  
+  .footer-bottom p:first-child {
+    font-weight: bold;
+    text-align: left;
+    font-size: 2rem;
+    letter-spacing: 0.06rem;
+    width: 328px;
+  }
+  .footer-bottom p:first-child span:first-child {
+    font-weight: bolder;
+  }
+  .footer-bottom p:first-child span:last-child {
+    font-weight: 300;
+  }
+  
+  .footer-bottom p:last-child {
+    font-size: 1.3rem;
+    color: #aaa;
+    text-align: left;
+    width: 607px;
+  }
+
+  .footer-bottom-copyright {
+    padding: 80px 0 0  0;
+    font-size: 1.3rem;
+    font-weight: 200;
+    letter-spacing: 0.08rem;
+  }
+  

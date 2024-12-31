@@ -3,6 +3,9 @@ footer {
     color: #fff;
     padding: 40px 20px;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
   }
   
   .footer-container {

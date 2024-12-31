@@ -45,7 +45,10 @@
     <header>
         <div class="head-main">
             <div class="head-txt">
-                <img src="images/header.png" alt="header">
+              <div class="head-txt-container">
+                <p>Transforming <span class="bug">bug</span><br><span class="bug">hunting</span> into opportunities with<br> 
+              our <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+              </div>
             </div>
             <div class="head-but">
                 <button class="head-but-1" type="button" class="button">
@@ -313,16 +316,19 @@
       <div class="mid-page-middle">
         <div class="mid-page-middle-heading">
           <img class="vector1" src="images/vector1.png" alt="vector1-1">
-          <h3>Some of Our Top Debuggers | TOP XYZ</h3>
+          <!-- <h3>Some of Our Top Debuggers | TOP XYZ</h3> -->
+          <div class="top-text">
+            Some of Our Top Debuggers | <span id="dynamicText">TOP XYZ</span>
+        </div>
         </div>
         <div class="mid-page-middle-main">
           <div class="circle-container">
-            <div class="circle red"></div>
-            <div class="circle green"></div>
-            <div class="circle blue"></div>
-            <div class="circle yellow"></div>
-            <div class="circle cyan"></div>
-            <div class="circle magenta"></div>
+            <div class="circle red" data-name="Red Debugger"></div>
+            <div class="circle green" data-name="Green Debugger"></div>
+            <div class="circle blue" data-name="Blue Debugger"></div>
+            <div class="circle yellow" data-name="Yellow Debugger"></div>
+            <div class="circle cyan" data-name="Cyan Debugger"></div>
+            <div class="circle purple" data-name="Purple Debugger"></div>
           </div>
         </div>
         <div class="mid-page-middle-main-robo">
@@ -383,7 +389,7 @@
         <div class="sec1-img">
           <img src="images/sec2-img2.png" alt="sec2-img">
         </div>
-      </div>
+      
 
       <img class="vector4" src="images/vector4.png" alt="vector4">
 
@@ -411,6 +417,7 @@
         <img class="vector6" src="images/vector5.png" alt="vector6">
         <img class="discord-vec" src="images/discord-vec.png" alt="discord-vec">
       </div>
+    </div>
 
       <div class="mid-page2">
       <div class="mid-page-foot-discord">
@@ -610,6 +617,7 @@
 
 
     <script src="js/script.js"></script>
+    <script src="js/robo.js"></script>
 
 </body>
 </html>

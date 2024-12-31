@@ -27,13 +27,75 @@ body {
 
 }
 
-.head-txt {
-    scale: 90%;
-    margin-top: 10px;
-    margin-left: -100px;
-    z-index: 1;
+
+  .head-txt {
     max-width: fit-content;
+    height: fit-content;
+    color: #eee;
+    justify-content: left;
+    align-items: start;
   }
+  .colored-text {
+    color: #00e6e6;
+  }
+
+  .bug {
+    color: #fff;
+    font-weight: 700;
+    font-style: italic;
+  }
+  .head-txt-container {
+    justify-content: center;
+    height: 510px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+  }
+  .head-txt-container p {
+    font-size: 4.2rem;
+    padding: .5rem;
+    padding-bottom: 46px;
+    line-height: 5.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-align: left;
+    overflow: hidden;
+    z-index: 5;
+  }
+  .head-txt-container p span.typed-text {
+    font-weight: 800;
+    font-style: italic;
+    color: #dd7732;
+  }
+  
+  p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  p span.cursor.typing {
+    animation: none;
+  }
+  @keyframes blink {
+    0% {
+      background-color: #ccc;
+    }
+    49% {
+      background-color: #ccc;
+    }
+    50% {
+      background-color: transparent;
+    }
+    99% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: #ccc;
+    }
+  }
+  
 
 header {
     display: flex;
@@ -57,7 +119,6 @@ header {
     align-items: center;
     text-align: left;
     margin-top: -80px;
-    z-index: 7;
     
 }
 
@@ -386,6 +447,9 @@ header {
   align-items: center;
   padding-top: 18px;
 }
+.mid-page2 {
+  padding: 0;
+}
 
 .mid-page-heading {
   display: flex;
@@ -536,7 +600,7 @@ header {
   align-items: flex-start;
 }
 
-.mid-page-middle .mid-page-middle-heading h3 {
+.top-text {
   font-size: 2.2rem;
   font-weight: 600;
   justify-content: center;
@@ -545,33 +609,42 @@ header {
   padding: 40px;
 }
 
+.top-text span {
+  color: rgb(61, 61, 255);
+}
+
 .mid-page-middle-main {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .circle-container {
   display: flex;
+  display: flex;
+  justify-content: center;
   gap: 45px; 
   padding: 10px 0 25px 0;
 }
 
 .circle {
-  width: 88px;
-  height: 88px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%; /* Makes the div circular */
-  background-color: #fff; /* White fill */
-  border: 3.5px solid; /* Circle border */
+  background-color: white;
+  display: inline-block;
+  cursor: pointer;
+  border: 4px solid transparent; /* Circle border */
 
 }
 
-.red { border-color: red; }
-.green { border-color: lime; }
-.blue { border-color: blue; }
-.yellow { border-color: yellow; }
-.cyan { border-color: cyan; }
-.magenta { border-color: magenta; }
+.circle.red { border-color: red; }
+.circle.green { border-color: green; }
+.circle.blue { border-color: blue; }
+.circle.yellow { border-color: yellow; }
+.circle.cyan { border-color: cyan; }
+.circle.purple { border-color: purple; }
 
 
 
@@ -584,6 +657,7 @@ header {
   flex-direction: column;
   scale: 180%;
   padding: 120px;
+  z-index: 0;
 }
 
 .outer-face {
@@ -723,7 +797,7 @@ label:before {
   display: flex;
   flex-direction: column;
   height: fit-content;
-  padding: 120px 40px 50px 40px;
+  padding: 120px 40px 0 40px;
 }
 
 
@@ -760,8 +834,8 @@ label:before {
 }
 
 .number-circle {
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
   background-color: #fff;
   color: #000;
   font-weight: bold;
@@ -773,7 +847,7 @@ label:before {
 }
 
 .pill {
-  height: 75px;
+  height: 70px;
   border-radius: 38px;
 }
 
@@ -804,13 +878,13 @@ label:before {
 }
 
 .text-container h1 {
-  font-size: 3.8rem;
+  font-size: 3.65rem;
   font-weight: 700;
   width: 835px;
 }
 
 .text-container p {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   width: 835px;
   font-weight: 400;
   line-height: 1.6;
@@ -827,7 +901,7 @@ label:before {
 }
 
 .sec3-img {
-  padding: 120px 40px;
+  padding: 120px 0 40px;
 }
 
 .sec1-img img {
@@ -850,23 +924,23 @@ label:before {
 .vector5 {
   position: absolute;
   transform: scale(0.35) translate(164px, -31px);
-  top: 4630px;
+  top: 4520px;
   z-index: 9;
   left: -120px;
 }
 .vector6 {
   position: absolute;
   transform: scale(0.5) translate(164px, -31px);
-  top: 5400px;
+  top: 5280px;
   z-index: 9;
   left: -120px;
 }
 .discord-vec {
   position: absolute;
-  transform: scale(0.4) translate(164px, -31px);
+  transform: scale(0.34) translate(164px, -31px);
   z-index: 9;
-  top: 4891px;
-  right: -155px;
+  top: 4740px;
+  right: -40px;
 }
 
 .mid-page-foot-discord {
@@ -875,8 +949,9 @@ label:before {
   justify-content: center;
   align-items: center;
   min-height: fit-content;
-  padding: 10px 0 170px 0;
+  padding: 10px 0 100px 0;
   width: 1428px;
+  scale: 88%;
 }
 
 .section-container {
@@ -923,13 +998,13 @@ label:before {
 .btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 20px 50px;
+  padding: 18px 30px;
   background: linear-gradient(to right, #3D4E81, #5753C9, #6E7FF3);
   color: white;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 18px;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth hover effect */
 }
 
@@ -999,6 +1074,7 @@ label:before {
   align-items: center;
   padding: 80px 60px 80px 60px;
   height: fit-content;
+  scale: 95%;
 }
 
 .faq-section-main {

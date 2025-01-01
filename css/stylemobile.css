@@ -1,4 +1,4 @@
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     * {
         margin: 0;
         padding: 0;
@@ -18,6 +18,7 @@
         background-color: #01040a;
     }
 
+    
     .main-box {
         display: none;
       }
@@ -26,21 +27,283 @@
         display: none;
     }
 
+    .mobile-screen {
+        color: white;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+.mobile-screen {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mobile-screen-head {
+    padding: 40px;
+  }
+  
+  .mobile-screen-header {
+    color: white;
+    font-size: 2.75rem;
+    line-height: 3.5rem;
+    text-align: center;
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .mobile-screen-header2 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 70px;
+  }
+  
+  
+  .button-mob {
+    position: relative;
+    padding: 10px 32px;
+    background: #ffffff;
+    font-size: 19px;
+    font-weight: 500;
+    color: #181818;
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #fec1958c;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  }
+  
+  .star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s ease;
+  }
+  
+  .button-mob:hover {
+    background: transparent;
+    color: #fec195;
+    box-shadow: 0 0 25px #fec1958c;
+  }
+  
+  .button-mob:hover .star-1 {
+    position: absolute;
+    top: -80%;
+    left: -30%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .button-mob:hover .star-2 {
+    position: absolute;
+    top: -25%;
+    left: 10%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .button-mob:hover .star-3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .button-mob:hover .star-4 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .button-mob:hover .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 115%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .button-mob:hover .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .fil0 {
+    fill: #fffdef;
+  }
+  
+  
+  #banner {
+    opacity: 25%;
+    min-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: 0;
+  }
+  #banner div {
+    position: fixed;
+    z-index: 0;
+  }
+  #canvas {
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .robo-animation-mob {
+    scale: 70%;
+  }
+  
+  .circle {
+    width: 360px;
+    height: 300px;
+    background: white;
+    border-radius: 7em;
+    position: relative;
+  }
+  .circle-inner {
+    width: 230px;
+    height: 180px;
+    background: #01040a;
+    border-radius: 2em;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .circle-eye {
+    width: 30px;
+    height: 50px;
+    background: white;
+    border-radius: 2em;
+  
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .circle-eye--left {left: 40%;}
+  .circle-eye--right {left: 60%;}
 
 }
 
+
+
+@media (max-width: 400px) {
+    .mobile-screen-head {
+        padding:  20px 60px 0 60px;
+      }
+      
+      .mobile-screen-header {
+        color: white;
+        font-size: 2rem;
+        line-height: 3.5rem;
+        text-align: center;
+        z-index: 1;
+        border-radius: 10px;
+      }
+      
+      .mobile-screen-header2 {
+        text-align: center;
+        font-size: 1rem;
+        padding-top: 40px;
+      }
+      
+
+      .robo-animation-mob {
+        scale: 55%;
+      }
+
+      .button-mob {
+        font-size: 18px;
+      }
+      .mobile-screen-header2 {
+        padding: 10px 0;
+      }
+}
 

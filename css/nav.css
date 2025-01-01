@@ -175,10 +175,10 @@ nav {
         justify-content: center;
         align-items: center;
         width: 200px;
-        background-color: #161A21;
+        background-color: #ffffff;
         height: 60px;
         border-radius: 100px;
-        box-shadow: rgba(255, 255, 255, 0.312) 0px 0px 100px 0px;
+        box-shadow: rgba(255, 255, 255, 0.267) 0px 0px 100px 0px;
     }
 
     .bar-ele-but {
@@ -186,7 +186,7 @@ nav {
     }
     
     .bar-elements {
-        color: white;
+        color: rgb(0, 0, 0);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -204,10 +204,10 @@ nav {
         justify-content: center;
         text-align: center;
         font-weight: bold;
-        font-size: 1.4rem;
+        font-size: 1.45rem;
         padding: 20px 0;
         letter-spacing: 0.06rem;
-        gap: 10px;
+        gap: 8px;
     }
     
     .mob-nav-ele span:first-child {

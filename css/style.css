@@ -172,60 +172,23 @@ header {
 /* robo animation */
 
 .robo-ani {
-    margin-top: 80px; 
-    margin-left: -735px;
-    z-index: 0;
-    border-top: none;
-    border-bottom: none;
-    scale: 90%;
-    max-height: fit-content;
+  margin-top: -75px;
+  margin-left: -538px;
+  z-index: 0;
+  border-top: none;
+  border-bottom: none;
+  max-height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 155%;
   }
-  
-.robo {
-    width: 100vw;
-    height: fit-content;
-    margin: 0;
-    background: black; 
-    overflow: hidden;
-  }
-  
-  #webgl {
-    width: 800px;
-    max-height: fit-content;;
-    position: absolute;
-    z-index: -1;
-  }
-  
-  #webgl2 {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+  .robo-can {
+    box-shadow: 0.2em 0.2em 2em #0008;
+    border: none;
     outline: none;
-    z-index: 2;
   }
-  
-  #bg-box {
-    width: 800px;
-    height: 602px;
-    position: absolute;
-    z-index: -1;
-    padding-top: 1px;     /* Shift content down by 1px */
-    padding-bottom: 1px; 
-    background: transparent; /* Change this line */
-  }
-  
-  .svg-box {
-    width: 800px;
-    height: 602px;
-    position: absolute;
-    z-index: 1;
-    background-color: #01040a;
-  
-  }
-  .svg-box #robot {
-    cursor: pointer;
-  }
-  
   .head-tab {
     background-color: #0c0c0c00; /* Dark background */
     color: #fff; /* White text */
@@ -1246,5 +1209,8 @@ label:before {
 }
 
 .mobile-screen{
+  display: none;
+}
+#banner {
   display: none;
 }

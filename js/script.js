@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
-
 function startAnimation() {
   const CANVAS_WIDTH = window.innerWidth;
   const CANVAS_HEIGHT = window.innerHeight;
@@ -93,7 +92,7 @@ function startAnimation() {
   const MAX = CANVAS_WIDTH;
   let cursor = [-1500, -1500];
 
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("sec-canvas");
   const ctx = canvas.getContext("2d");
 
   canvas.width = CANVAS_WIDTH;
@@ -212,6 +211,3 @@ function startAnimation() {
 startAnimation();
 
 window.addEventListener("resize", startAnimation);
-
-
-

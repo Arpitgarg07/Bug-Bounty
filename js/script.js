@@ -212,3 +212,53 @@ function startAnimation() {
 startAnimation();
 
 window.addEventListener("resize", startAnimation);
+
+
+
+let body = document.querySelector(".circle");
+let face = document.querySelector(".circle-inner");
+let eyeLeft = document.querySelector(".circle-eye--left");
+let eyeRight = document.querySelector(".circle-eye--right");
+
+let tl = gsap.timeline();
+// timeline
+tl.set([eyeLeft,eyeRight],{
+    scaleY: 0.1,
+});
+tl.from(body,{
+    x: -50,
+    duration: 0.3,
+});
+tl.to([eyeLeft,eyeRight],{
+    scaleY: 1,
+    ease: "power2.out",
+});
+tl.to([eyeLeft,eyeRight],{
+    scaleY: 0.2,
+    repeat: 1,
+    yoyo: true,
+    duration: 0.1,
+});
+tl.to([eyeLeft,eyeRight],{
+    x: -25,
+    duration: 1.5,
+});
+tl.to([eyeLeft,eyeRight],{
+    x: 25,
+    duration: 1.2,
+});
+tl.to([eyeLeft,eyeRight],{
+    x: 0,
+});
+tl.to(eyeRight,{
+    scaleY: 0.2,
+    repeat: 1,
+    yoyo: true,
+    duration: 0.1,
+});
+tl.to(face,{
+    rotate: "2deg",
+    repeat: 1,
+    yoyo: true,
+    duration: 0.1,
+},"<");

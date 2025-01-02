@@ -5,6 +5,7 @@
     font-family: "Urbanist", sans-serif;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
+    cursor: none;
 }
 
 body {
@@ -12,3 +13,22 @@ body {
     overflow-y: scroll;
     background-color: #01040A;
 }
+
+
+#cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white; /* Default border color */
+    pointer-events: none;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+      height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 999;
+    mix-blend-mode: difference; /* Inverts the border color dynamically */
+  }
+  

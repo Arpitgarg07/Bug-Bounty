@@ -31,7 +31,6 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 }
 
 .main-box{
@@ -1238,23 +1237,6 @@ label:before {
   right: -220px;
 }
 
-
-#cursor-border {
-  --size: 50px;
-  position: fixed;
-  top: calc(var(--size) / -2);
-  left: calc(var(--size) / -2);
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background-color: white;
-  border: 2px solid white; /* Default border color */
-  pointer-events: none;
-  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
-    height 0.15s ease-out, background-color 0.15s ease-out;
-  z-index: 997;
-  mix-blend-mode: difference; /* Inverts the border color dynamically */
-}
 
 .mobile-screen{
   display: none;

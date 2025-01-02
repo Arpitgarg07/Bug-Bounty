@@ -1,0 +1,89 @@
+body {
+    background-color: #01040A;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullpage {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.main {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 55px;
+
+}
+  /* Container styling */
+  .tab-container {
+    display: flex;
+    position: relative;
+    background-color: #161A21; /* Dark background */
+    border-radius: 10px;
+    padding: 8px;
+    width: fit-content;
+    position: relative;
+    gap: 10px;
+  }
+  
+  /* Buttons styling */
+  .tab-button {
+    background: none;
+    border: none;
+    color: #fff; /* Blue text color */
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.1rem;
+  }
+  
+  .tab-button.active {
+    background-color: #fff; /* Blue background for active tab */
+    color: #161A21; /* White text for active tab */
+    font-weight: bold;
+  }
+  
+  /* Add hover effect even for the active button */
+  .tab-button:hover {
+    background-color: #d8e3ff32; /* Lighter blue on hover */
+    color: #fff; /* Blue text for hover */
+  }
+  
+  /* Override hover effect for the active button */
+  .tab-button.active:hover {
+    background-color: #fff; /* Keep blue background */
+    color: #161A21; /* Keep white text */
+  }
+  
+  /* Slider (active background for selected tab) */
+  .tab-slider {
+    position: absolute;
+    background: #fff; /* Blue background for the slider */
+    height: 72%;
+    width: 32%; /* Adjust to match the number of buttons */
+    border-radius: 8px; /* Rounded corners for slider */
+    transition: transform 0.3s ease; /* Smooth sliding animation */
+    z-index: 0;
+  }
+  
+  /* Bottom bar styling */
+  .tab-bar {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px; /* Thickness of the bar */
+    width: 33.33%; /* Match one button width */
+    background-color: #ffffff; /* Bar color */
+    transition: transform 0.3s ease; /* Smooth sliding animation */
+    z-index: 1; /* Place above the slider */
+  }
+  

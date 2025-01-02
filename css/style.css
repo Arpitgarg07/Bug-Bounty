@@ -35,15 +35,26 @@ body {
 }
 
 .main-box{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
     overflow: hidden;
-
 }
-
-
+.gif1,
+.gif2 {
+  position: absolute;
+  scale: 70%;
+}
+.gif1 {
+  top: 2750px;
+  right: 50px;
+}
+.gif2 {
+  top: 4300px;
+  right: 50px;
+}
   .head-txt {
     max-width: fit-content;
     height: fit-content;

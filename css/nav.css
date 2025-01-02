@@ -43,6 +43,7 @@ nav {
 
 .bar-ele-but h4 {
     font-weight: 600;
+    font-size: 1rem;
 }
 
 .bar-ele-but h4 a {
@@ -122,32 +123,151 @@ nav {
     object-fit: contain;
 }
 
-/* Button code signup */
-.button {
-    color: white;
-    background-color: #101010;
-    border-radius: 15rem;
-    font-size: 1.1rem;
-    font: bold;
-    padding-left: 1.7rem;
-    padding-right: 1.7rem;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    cursor: pointer;
-    text-align: center;
+
+
+.ui-btn {
+    font-size: 1rem;
+    box-sizing: border-box;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    color: #fff;
+    font: 600 16px Menlo, Roboto Mono, monospace;
+    background: transparent;
     border: none;
-}
-
-.button h4 {
     cursor: pointer;
-}
-
-.button:hover {
-    background-color: #3a3a3a;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  
+  .ui-btn span {
+    letter-spacing: 0.1rem;
+    transition: 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    background: inherit;
     cursor: pointer;
-}
+  }
+  
+  .ui-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+  }
+  
+  .ui-btn:hover,
+  .ui-btn:focus {
+    background: #161a21;
 
+  }
+  
+  .ui-btn:hover span,
+  .ui-btn:focus span {
+    font-weight: 900;
+    color: #fff;
+  }
+  
+  .ui-btn:hover span::before,
+  .ui-btn:focus span::before {
+    animation: chitchat linear both 1.2s;
+  }
+  
+  @keyframes chitchat {
+    0% {
+      content: "#";
+    }
+  
+    5% {
+      content: ".@$";
+    }
+  
+    10% {
+      content: "$$^*{";
+    }
+  
+    15% {
+      content: "-!#@";
+    }
+  
+    20% {
+      content: "#$_";
+    }
+  
+    25% {
+      content: "№:$$0";
+    }
+  
+    30% {
+      content: "#{@&+.";
+    }
+  
+    35% {
+      content: "@}+*--?";
+    }
+  
+    40% {
+      content: "?{4$$@%";
+    }
+  
+    45% {
+      content: "=.,$~-*^!";
+    }
+  
+    50% {
+      content: "?2@%";
+    }
+  
+    55% {
+      content: "&*$\;1}]";
+    }
+  
+    60% {
+      content: "$&#?{%:%";
+      right: 0;
+    }
+  
+    65% {
+      content: "#$&|{f[4";
+      right: 0;
+    }
+  
+    70% {
+      content: "{4^&*@0%";
+      right: 0;
+    }
+  
+    75% {
+      content: "'1_4~{})";
+      right: 0;
+    
+    }
+    80% {
+      content: "{0{}%";
+      right: 0;
+    }
+  
+    85% {
+      content: "]45&>'";
+      right: 0;
+    }
+  
+    90% {
+      content: "4%^/*-";
+      right: 0;
+    }
+  
+    95% {
+      content: "2#^";
+      right: 0;
+    }
+  
+    100% {
+      content: "Dashboard";
+      right: 0;
+    }
+}
+  
 
 /* For Mobile Screens */
 @media (max-width: 800px) {

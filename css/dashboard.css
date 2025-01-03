@@ -1,12 +1,16 @@
+nav {
+  position: relative !important;
+}
+ 
  /* Container styling */
- .page-hide {
+ /* .page-hide {
   position: fixed;
   background-color: #01040a;
   width: 1428px;
   height: 270px;
   z-index: 1;
+ } */
 
- }
  .dash-tab {
   position: relative;
   justify-content: center;
@@ -15,12 +19,10 @@
   flex-direction: column;
   width: 1428px;
   padding: 55px;
-  top: 50px;
  }
  
 .guide {
-  position: fixed;
-  margin-bottom: 100px;
+  position: relative;
   z-index: 5;
 }
 
@@ -100,7 +102,7 @@
 }
 
 .wrapper {
-    position: fixed;
+    position: relative;
     width: 1350px;
     background-color: #161a21;
     border-radius: 13px;

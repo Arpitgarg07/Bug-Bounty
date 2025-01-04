@@ -1,0 +1,235 @@
+body {
+    background-color: #01040A;
+    justify-content: center;
+    align-items: center;
+}
+  
+.fullpage {
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+  
+.main {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 1428px;
+    padding: 50px;
+}
+
+.bug-section {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    align-items: center;
+}
+
+.bug-img {
+    width: 90px ;
+    height: 90px;
+    background-color: aliceblue;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.bug-tittle {
+    font-size: 1.25rem;
+    margin-left: 25px;
+    color: white;
+}
+
+.bug-info {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 60px;
+}
+.bug-info-detail {
+    width: 63%;
+}
+.bug-info-apply {
+    width: 31%;
+}
+
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+#webcrumbs-bug-info {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.container-bug-info {
+  width: 100%;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-bottom: 4px solid rgba(183, 169, 255, 1);
+}
+
+.header-bug-info {
+  background-color: rgba(183, 169, 255, 1);
+  height: 400px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.content-bug-info {
+  padding: 24px;
+}
+
+.title-bug-info {
+  font-family: 'Lato', sans-serif;
+  font-size: 27px;
+  color: rgba(40, 40, 40, 1);
+  margin-bottom: 5px;
+}
+
+.company-bug-info {
+  font-size: 18px;
+  color: rgba(115, 65, 255, 1);
+  margin-bottom: 16px;
+}
+.company-bug-info:hover {
+    cursor: pointer;
+}
+
+.subtitle-bug-info {
+  font-size: 21px;
+  color: rgba(40, 40, 40, 1);
+  font-weight: 650;
+  margin-bottom: 8px;
+}
+
+.description-bug-info {
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: rgb(92, 92, 92);
+  margin-bottom: 16px;
+}
+
+.rules-bug-info {
+  font-size: 18px;
+  color: rgba(40, 40, 40, 1);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.link {
+  font-size: 14px;
+  color: rgba(115, 65, 255, 1);
+  text-decoration: underline;
+}
+.link:hover {
+    cursor: pointer;
+}
+
+.social-bug-info {
+  margin-top: 24px;
+}
+
+.find-us-bug-info {
+  font-size: 16px;
+  color: rgba(40, 40, 40, 1);
+  margin-bottom: 8px;
+}
+
+.icons-bug-info {
+  display: flex;
+  gap: 16px;
+}
+
+.icons-bug-info i {
+  font-size: 24px;
+  color: rgba(40, 40, 40, 1);
+  cursor: pointer;
+}
+
+
+.container-bug-apply {
+    width: 100%;
+    height: fit-content;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    margin: 0 auto;
+  }
+  .button-group-bug-apply {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .button-bug-apply {
+    padding: 13px;
+    background: #eeeeee;
+    border-radius: 13px;
+    color: #000000;
+    border: none;
+  }
+  .button-bug-apply i {
+    cursor: pointer;
+  }
+  .text-group-bug-apply {
+    text-align: left;
+    color: #282828;
+    margin-bottom: 24px;
+  }
+  .text-group-bug-apply p {
+    margin: 4px 0;
+  }
+  .users-section-bug-apply {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .avatars-bug-apply {
+    display: flex;
+    margin-right: 24px;
+  }
+  .avatar-bug-apply {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -12px;
+  }
+  .stats-bug-apply {
+    text-align: left;
+  }
+  .stats-bug-apply p {
+    margin: 4px 0;
+  }
+  .info-box-bug-apply {
+    padding: 12px;
+    background: #e9e5ff;
+    border-radius: 12px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  .info-box-bug-apply p {
+    margin: 4px 0;
+  }
+  .debug-button-bug-apply {
+    width: 100%;
+    height: 70px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(to right, #3b82f6, #a855f7);
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+  }

@@ -588,9 +588,29 @@ body {
   color: #1b233d;
  }
 
+ .vector5 {
+  position: absolute;
+  transform: scale(0.35) translate(164px, -31px);
+  z-index: 9;
+  margin-top: -600px;
+  left: -120px;
+}
+.vector6 {
+  position: absolute;
+  transform: scale(0.5) translate(164px, -31px);
+  z-index: 9;
+  margin-top: 750px;
+  left: -120px;
+}
 
+.discord-vec {
+  position: absolute;
+  transform: scale(0.34) translate(164px, -31px);
+  z-index: 9;
+  margin-top: 130px;
+  right: -20px;
 
-
+}
 
  
 .mid-page-foot-discord {

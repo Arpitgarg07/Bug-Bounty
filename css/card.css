@@ -1,0 +1,120 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+.webcrumbs-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.card-popup {
+  background-color: #741ce8;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  position: relative;
+  height: 70vh;
+}
+
+.content-popup {
+  position: absolute;
+  width: 350px;
+  background-color: #f1f5f9;
+  border-radius: 40px;
+  padding: 24px;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-popup {
+  text-align: center;
+}
+
+.profile-img-popup {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.name-popup {
+  font-size: 26px;
+  color: #1f2937;
+  margin-top: 16px;
+}
+
+.bio-popup {
+  font-size: 16px;
+  color: #4b5563;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+.rewards-popup {
+  margin-top: 24px;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.stats-popup {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.stats-popup span {
+  color: #4b5563;
+}
+
+.social-links-popup {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.social-link-popup {
+  font-size: 24px;
+  color: #3b82f6;
+}
+
+.social-link-popup.instagram:hover {
+  color: #e1306c;
+}
+
+.social-link-popup.linkedin:hover {
+  color: #0e76a8;
+}
+
+.social-link-popup.twitter:hover {
+  color: #1da1f2;
+}
+
+.close-btn-popup {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
+  color: 1f2937;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn-popup:hover {
+  color: #e11d48; /* Red color when hovering */
+}

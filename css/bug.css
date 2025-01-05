@@ -12,6 +12,62 @@ body {
     flex-direction: column;
     z-index: 0;
 }
+
+#webcrumbs-back {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 150px;
+  margin-left: -1150px;
+  scale: 90%;
+
+}
+
+#webcrumbs-back > div {
+  width: 50px;
+  height: 55px;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+#webcrumbs-back button {
+  background-color: #7341FF;
+  color: #FFFFFF;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+#webcrumbs-back button:hover {
+  opacity: 0.7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+#webcrumbs-back button i {
+  cursor: pointer;
+}
+
+#webcrumbs-back span {
+  color: #2E2E2E;
+  font-weight: 600;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
   
 .main {
     justify-content: center;
@@ -64,7 +120,6 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 #webcrumbs-bug-info {
-  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
@@ -177,6 +232,7 @@ body {
     color: #000000;
     border: none;
   }
+
   .button-bug-apply i {
     cursor: pointer;
   }
@@ -232,4 +288,274 @@ body {
     font-size: 23px;
     text-align: center;
     cursor: pointer;
-  }
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.debug-button-bug-apply:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+    transform: scale(1.02);
+}
+.debug-button-bug-apply:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+.new-section {
+    font-size: 1rem;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    background-color: #e9e6ff52;
+    text-align: center;
+}
+.bounty-give {
+  align-self: flex-start;
+  padding: 0 16px 50px 60px;
+  width: 63%;
+}
+  
+#webcrumbs-bounty-give {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+/* Container */
+.container-bounty-give {
+  width: 100%;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.title-bounty-give {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+/* Bounty Card */
+.bounty-card-bounty-give {
+  background-color: #fff;
+  color: #111;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+  margin-bottom: 25px;
+  height: 130px;
+}
+
+/* Bounty Info */
+.bounty-info-bounty-give {
+  max-width: calc(100% - 120px);
+}
+
+.bounty-title-bounty-give {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.bounty-description-bounty-give {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+/* Bounty Reward */
+.bounty-reward-bounty-give {
+  background-color: #111;
+  color: #fff;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 70px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.bounty-reward-bounty-give:hover {
+  opacity: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+  transform: scale(1.08);
+}
+
+.reward-text-bounty-give {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white; /* Change to your text color */
+  padding: 0 80px;
+}
+
+.divider span {
+  font-size: 1.9rem;
+  margin-right: 20px; /* Add space between text and line */
+  color: white; /* Change to your text color */
+}
+
+.divider hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid white; /* Change to your line color */
+  width: 1100px;
+  min-width: max-content;
+  background-color: white; /* Optional: ensure consistent color */
+}
+
+.more-bugs {
+  padding: 0 16px 50px 60px;
+}
+
+.open-bugs {
+  display: flex;
+  flex-direction: column;
+  width: 1428px;
+  padding: 55px 80px;
+  height: fit-content;
+}
+
+.bug1,
+.bug2 {
+  display: flex;
+  width: 46%;
+}
+.bug-couple {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.card-card {
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+  font-family: "Arial";
+  color: #fff;
+  display: grid;
+  cursor: pointer;
+  grid-template-rows: 50px 1fr;
+}
+
+.card-card:hover .img-section-card {
+  transform: translateY(0em);
+}
+
+.card-desc-card {
+  border-radius: 10px;
+  padding: 28px;
+  position: relative;
+  top: -10px;
+  display: grid;
+  gap: 10px;
+  background: #1C204B;
+}
+
+.img-section-card {
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: hsl(195, 74%, 62%);
+  transform: translateY(0.7em);
+}
+
+.upcoming .img-section-card {
+  background: #e100ff;
+}
+.past .img-section-card {
+  background: #ffeb38;
+}
+
+.card-card svg {
+  float: left;
+  max-width: 100%;
+  max-height: 100%;
+  rotate: -22deg;
+}
+
+.header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-card h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header-icons-card {
+  display: flex;
+  gap: 10px;
+}
+
+.header-icons-card .close-icon-card,
+.header-icons-card .github-icon-card, 
+.header-icons-card .fa-x-twitter {
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+.description-card {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.footer-card {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.footer-card .company-name-card {
+  color: #ff0080;
+  cursor: pointer;
+}
+
+.actions-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.actions-card .btn-card {
+  padding: 10px 18px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+}
+
+.actions-card .apply-btn-card {
+  margin-left: auto;
+  padding: 11px 19px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-btn-card:hover {
+  transform: scale(1.05);
+}

@@ -111,10 +111,14 @@ body {
   font-weight: bold;
   cursor: pointer;
   font-size: 1.4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 #webcrumbs-feature .debug-button:hover {
-  opacity: 0.7;
+  opacity: 0.9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }
 
 
@@ -593,14 +597,14 @@ body {
   transform: scale(0.35) translate(164px, -31px);
   z-index: 9;
   margin-top: -600px;
-  left: -120px;
+  margin-left: -1220px;
 }
 .vector6 {
   position: absolute;
   transform: scale(0.5) translate(164px, -31px);
   z-index: 9;
   margin-top: 750px;
-  left: -120px;
+  margin-left: -1390px;
 }
 
 .discord-vec {
@@ -608,7 +612,7 @@ body {
   transform: scale(0.34) translate(164px, -31px);
   z-index: 9;
   margin-top: 130px;
-  right: -20px;
+  margin-right: -770px;
 
 }
 

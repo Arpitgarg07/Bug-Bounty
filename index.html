@@ -30,14 +30,14 @@
                     <div class="left">
                         <h4><a href="index.html" class="active" style="text-decoration: none; color: #ffffff;">Home</a></h4>
                         <h4><a href="#" style="text-decoration: none; color: #ffffff;">About</a></h4>
-                        <h4><a href="#" style="text-decoration: none; color: #ffffff;">Bounties</a></h4>
+                        <h4><a href="bounties.html" style="text-decoration: none; color: #ffffff;">Bounties</a></h4>
                     </div>
                     <div class="center">
                       <img class="img-logo" src="images/logo.png" alt="logo">
                   </div>
                     <div class="right">
                         <h4><a href="#" style="text-decoration: none; color: #ffffff;">Blog</a></h4>
-                        <h4><a href="#" style="text-decoration: none; color: #ffffff;">FAQ</a></h4>
+                        <h4><a href="#faq-section" style="text-decoration: none; color: #ffffff;">FAQ</a></h4>
                         <button id="discoverButton" class="ui-btn">
                           <span>
                             Dashboard
@@ -296,7 +296,7 @@
         </div>
         <div class="card-p2">
           <span>June 28, 2024</span>
-          <button>Debug</button>
+          <button onclick="window.location.href='bug.html'">Debug</button>
         </div>
         </div>
     
@@ -308,7 +308,7 @@
         </div>
         <div class="card-p2">
           <span>June 23, 2024</span>
-          <button>Debug</button>
+          <button onclick="window.location.href='bug.html'">Debug</button>
         </div>
         </div>
     
@@ -320,12 +320,12 @@
         </div>
         <div class="card-p2">
           <span>June 20, 2024</span>
-          <button>Debug</button>
+          <button onclick="window.location.href='bug.html'">Debug</button>
         </div>
         </div>
       </div>
       <div class="card-all-text">
-        <h3><a href="#">See all</a></h3>
+        <h3><a href="bounties.html">See all</a></h3>
       </div>
 
 
@@ -339,7 +339,7 @@
         </div>
         <div class="mid-page-middle-main">
           <div class="circle-container">
-            <div class="circle red" data-name="Red Debugger"></div>
+            <div  id="popupBtn" onclick="loadCard()" class="circle red" data-name="Red Debugger"></div>
             <div class="circle green" data-name="Green Debugger"></div>
             <div class="circle blue" data-name="Blue Debugger"></div>
             <div class="circle yellow" data-name="Yellow Debugger"></div>
@@ -522,7 +522,7 @@
       <hr style="border: 1.5px solid rgb(255, 255, 255); width: 1536px; border-radius: 5px;">
 
 
-      <div class="mid-page-foot-faq">
+      <div id="faq-section" class="mid-page-foot-faq">
         <div class="faq-section-main">
         <div class="faq-top">
           <div class="faq-top-right">

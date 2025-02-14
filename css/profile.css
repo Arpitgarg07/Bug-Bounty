@@ -1,0 +1,173 @@
+body {
+    background-color: #01040A;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+.nav-div {
+    display: flex;
+    flex-direction: row; /* Changed to row for horizontal alignment */
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: center; /* Vertically center the items */
+    z-index: 9999;
+    height: 100px;
+    padding: 50px 0 0 50px;
+    cursor: default !important;
+}
+
+nav {
+    z-index: 9999;
+    height: 60px;
+    position: absolute;
+    width: 100%; /* Ensures it spans the full width */
+    display: flex;
+    justify-content: space-between; /* Align the items in the nav */
+    align-items: center; /* Vertically center the nav items */
+}
+
+.bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    background-color: #ffffff;
+    height: 60px;
+    border-radius: 100px;
+    box-shadow: rgba(255, 255, 255, 0.267) 0px 0px 100px 0px;
+}
+
+.activity {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-right: 90px;
+    font-weight: 600;
+}
+.my-bugs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #636363;
+    gap: 10px;
+    padding: 8px 24px;
+}
+.my-badges {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #636363;
+    gap: 10px;
+    padding: 8px 24px;
+}
+.my-coins {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #636363;
+    gap: 10px;
+    padding: 8px 24px;
+}
+
+.icon-activity {
+    height: 25px;
+    width: 25px;
+}
+
+.profile-icon {
+    display: flex;
+    gap: 15px;
+    width: 50px;
+    height: 50px;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer !important;
+  }
+  .profile-icon img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer !important;
+  }
+  
+
+.bar-ele-but {
+    display: none;
+}
+
+.bar-elements {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mob-nav-ele {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.45rem;
+    padding: 20px 0;
+    letter-spacing: 0.06rem;
+    gap: 8px;
+}
+
+.mob-nav-ele span:first-child {
+    font-weight: 900;
+}
+
+.mob-nav-ele span:last-child {
+    font-weight: 500;
+}
+
+.fullpage {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.main-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden;
+}
+
+
+  /* .fullpage {
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  } */
+  
+  .main {
+    margin: 80px;
+    background-color: #fff;
+    height: fit-content;
+    width: 2000px
+  
+  }
+  

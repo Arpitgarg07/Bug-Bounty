@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Report Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/newbug.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Bug Report Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="bug-name">Name of Bug</label>
+                <input type="text" id="bug-name" name="bug-name" required>
+            </div>
+            <div class="form-group">
+                <label for="about-bug">About Bug</label>
+                <textarea id="about-bug" name="about-bug" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="company-name">Company Name</label>
+                <input type="text" id="company-name" name="company-name" required>
+            </div>
+            <div class="form-group">
+                <label for="company-logo">Company Logo</label>
+                <input type="file" id="company-logo" name="company-logo" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="dates">Application Closes</label>
+                <input type="date" id="dates" name="dates" required>
+            </div>
+            <div class="form-group">
+                <label>Socials</label>
+                <div class="social-inputs">
+                    <div class="social-field">
+                        <i class="fab fa-linkedin"></i>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="LinkedIn Profile Link">
+                    </div>
+                    <div class="social-field">
+                        <i class="fab fa-twitter"></i>
+                        <input type="url" id="twitter" name="twitter" placeholder="Twitter Profile Link">
+                    </div>
+                    <div class="social-field">
+                        <i class="fab fa-github"></i>
+                        <input type="url" id="github" name="github" placeholder="GitHub Profile Link">
+                    </div>
+                    <div class="social-field">
+                        <i class="fab fa-instagram"></i>
+                        <input type="url" id="instagram" name="instagram" placeholder="Instagram Profile Link">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="first-bounty">First Bounty</label>
+                <div class="money-input">
+                    <span class="currency-symbol">$</span>
+                    <input type="text" id="first-bounty" name="first-bounty" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="second-bounty">Second Bounty</label>
+                <div class="money-input">
+                    <span class="currency-symbol">$</span>
+                    <input type="text" id="second-bounty" name="second-bounty" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="faqs">FAQs</label>
+                <div class="faq-section" id="faq-section">
+                    <div class="faq-item">
+                        <span class="faq-number">1.</span>
+                        <input type="text" placeholder="Question" class="faq-input">
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-number">2.</span>
+                        <input type="text" placeholder="Question" class="faq-input">
+                    </div>
+                    <div class="faq-item">
+                        <span class="faq-number">3.</span>
+                        <input type="text" placeholder="Question" class="faq-input">
+                    </div>
+                    <button type="button" class="add-faq-btn" onclick="addFAQ()">Add More</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="repo-link">Repo Link</label>
+                <input type="url" id="repo-link" name="repo-link" required>
+            </div>
+            <div class="form-group">
+                <label for="tech-stacks">Tech Stacks</label>
+                <input type="text" id="tech-stacks" name="tech-stacks" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function addFAQ() {
+            const faqSection = document.getElementById('faq-section');
+            const newNumber = faqSection.querySelectorAll('.faq-item').length + 1;
+            const newFAQ = document.createElement('div');
+            newFAQ.classList.add('faq-item');
+            newFAQ.innerHTML = `
+                <span class="faq-number">${newNumber}.</span>
+                <input type="text" placeholder="Question" class="faq-input">
+            `;
+            faqSection.insertBefore(newFAQ, faqSection.querySelector('.add-faq-btn'));
+        }
+    </script>
+</body>
+</html>

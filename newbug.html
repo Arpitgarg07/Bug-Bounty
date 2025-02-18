@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bug Report Form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Bug Bounty</title>
     <link rel="stylesheet" href="css/newbug.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Bug Report Form</h2>
-        <form>
+    <div id="cursor-border"></div>
+    <div class="login-card">
+        <div class="brand">
+            <h1>New Bug</h1>
+            <p>Enter the Details of Bug.</p>
+        </div>
+
+        <form id="loginForm">
             <div class="form-group">
                 <label for="bug-name">Name of Bug</label>
                 <input type="text" id="bug-name" name="bug-name" required>
@@ -95,13 +102,12 @@
                 <label for="tech-stacks">Tech Stacks</label>
                 <input type="text" id="tech-stacks" name="tech-stacks" required>
             </div>
-            <div class="form-group">
-                <button type="submit" class="submit-btn">Submit</button>
-            </div>
+            <button type="submit" class="login-btn" id="loginButton">
+                Continue
+            </button>
         </form>
     </div>
-
-    <script>
+      <script>
         function addFAQ() {
             const faqSection = document.getElementById('faq-section');
             const newNumber = faqSection.querySelectorAll('.faq-item').length + 1;
@@ -114,5 +120,10 @@
             faqSection.insertBefore(newFAQ, faqSection.querySelector('.add-faq-btn'));
         }
     </script>
+    
+<script src="js/script.js"></script>
+<script src="js/global.js"></script>
+<script src="js/cursor.js"></script>
+
 </body>
 </html>

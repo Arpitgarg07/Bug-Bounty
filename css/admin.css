@@ -129,10 +129,10 @@ body {
     padding: 20px 60px;
     width: 1080px;
     height: 150px;
-    gap: 50px;
+    gap: 60px;
 }
 
-.setting {
+.setting, .notify {
     margin-top: 5px;
     scale: 150%;
 }
@@ -144,7 +144,7 @@ body {
         width: 160px;
         height: 50px;
         background-color: #ffffff;
-        border-radius: 25px;
+        border-radius: 20px;
         box-shadow: rgba(255, 255, 255, 0.267) 0px 0px 100px 0px;
         font-weight: 700;
         font-size: 1.1rem;
@@ -154,9 +154,87 @@ body {
 
 .main-mid1-txt {
     display: flex;
+    flex-direction: column;
     width: fit-content;
-    height: 150px;
     color: #ffffff;
     font-size: 2rem;
     padding: 0px 60px;
+    letter-spacing: 0.1rem;
+}
+
+.blue-txt {
+    color: #0DCFFF;
+    font-weight: 800;
+}
+.pink-txt {
+    color: #FF6BCE;
+    font-weight: 800;
+}
+.yellow-txt {
+    color: #FFC94C;
+    font-weight: 800;
+}
+.main-mid1-txt h6 {
+    width: 60%;
+    font-size: 1.28rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.main2-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    padding: 0px 50px;
+    width: 90%;
+    height: 60px;
+    border-radius: 22px;
+    background-color: #636363;;
+}
+
+.tab-switch-i {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    h4 {
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        span {
+            color: #ffffff;
+            text-decoration: underline 3px;
+            text-decoration-color: #FFC94C;
+            text-underline-offset: 5px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+
+}
+.tab-switch-all {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    border-radius: 18px;
+    background-color: #D9D9D9;
+
+
+    h4 {
+        color: #000;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    svg {
+        scale: 140%;
+    }
+
 }

@@ -60,14 +60,19 @@
 
             <div class="main2-tab">
                 <div class="tab-switch-i">
-                    <h4><span>profile Bug</span></h4>
+                    <h4><span>Profile Bug</span></h4>
                     <h4>Payment Bug</h4>
                     <h4>Admin Bug</h4>
                     <h4>Delivery Bug</h4>
                 </div>
-                <div class="tab-switch-all">
+                <div class="tab-switch-all" onclick="toggleDropdown()">
                     <h4>All</h4>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-360 280-560h400L480-360Z"/></svg>
+                    <div class="dropdown-content" id="dropdown">
+                        <a href="#">Featured Bugs</a>
+                        <a href="#">New Bugs</a>
+                        <a href="#">Old Bugs</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,6 +82,24 @@
 
 
 </div>
+<script>
+    function toggleDropdown() {
+        document.getElementById("dropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.tab-switch-all') && !event.target.matches('.tab-switch-all *')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
     <script src="js/script.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/global.js"></script>

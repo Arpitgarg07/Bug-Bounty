@@ -142,6 +142,8 @@ nav {
     position: relative;
     justify-content: center;
     align-items: center;
+    max-width: 1428px;
+    margin: 0 auto;
   }
   
 .main-box{

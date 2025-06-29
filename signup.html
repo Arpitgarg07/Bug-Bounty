@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Bug Bounty</title>
+    <!-- <link rel="stylesheet" href="css/login.css"> -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/stylemobile.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <!-- intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+</head>
+<body>
+        <div id="cursor-border"></div>
+    <canvas id="particleCanvas"></canvas>
+    <img src="images/logo-dark.png" alt="Bug Bounty Logo" class="login-logo-fixed">
+    <div class="login-page-container">
+        <div class="login-card">
+            <h3 class="login-title">Create your account</h3>
+            <div id="signupChoiceMsg" class="signup-choice-msg">
+                <p class="login-subtitle">Choose how you want to sign up to continue.</p>
+            </div>            
+            <div class="signup-toggle-row" id="signupToggleRow">
+                <div class="signup-toggle-btns-group">
+                    <button class="signup-toggle-btn" id="companyBtn" type="button">Sign up as Company</button>
+                    <button class="signup-toggle-btn" id="freelancerBtn" type="button">Sign up as Freelancer</button>
+                </div>
+                <button id="continueBtn" class="login-btn login-btn-primary signup-continue-btn" disabled>Continue</button>
+            </div>
+
+            <form class="signup-form" id="companyForm" style="display:none;" autocomplete="off">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cFirstName" class="form-label">First Name</label>
+                        <input type="text" id="cFirstName" name="cFirstName" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cLastName" class="form-label">Last Name</label>
+                        <input type="text" id="cLastName" name="cLastName" class="form-input" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="companyName" class="form-label">Company Name</label>
+                    <input type="text" id="companyName" name="companyName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyEmail" class="form-label">Company Email</label>
+                    <input type="email" id="companyEmail" name="companyEmail" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile_code" class="form-label">Phone Number</label>
+                    <input type="text" id="mobile_code" name="mobile_code" class="form-input" required placeholder="Phone Number"  />
+                </div>
+                <div class="form-group password-group">
+                    <label for="cPassword" class="form-label">Password</label>
+                    <div class="password-row">
+                        <input type="password" id="cPassword" name="cPassword" class="form-input password-input" required>
+                        <span class="toggle-password" data-target="cPassword" tabindex="0" aria-label="Show password">
+                            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="8" ry="5"/><circle cx="12" cy="12" r="2.5"/></svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group password-group">
+                    <label for="cConfirmPassword" class="form-label">Confirm Password</label>
+                    <div class="password-row">
+                        <input type="password" id="cConfirmPassword" name="cConfirmPassword" class="form-input password-input" required>
+                        <span class="toggle-password" data-target="cConfirmPassword" tabindex="0" aria-label="Show password">
+                            <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="8" ry="5"/><circle cx="12" cy="12" r="2.5"/></svg>
+                        </span>
+                    </div>
+                </div>
+                <button type="submit" class="login-btn login-btn-primary">Sign up</button>
+            </form>
+            <form class="signup-form" id="freelancerForm" style="display:none;" autocomplete="off">
+                <div class="social-signup-row">
+                    <button type="button" class="social-btn github-btn" aria-label="Sign up with GitHub" style="justify-content: center;">
+                        <svg class="login-icon" fill="currentColor" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                            <path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z" />
+                        </svg>
+                        GitHub
+                    </button>
+                    <button type="button" class="social-btn google-btn" aria-label="Sign up with Google" style="justify-content: center;">
+                        <svg class="login-icon" fill="currentColor" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                            <path d="M3.06364 7.50914C4.70909 4.24092 8.09084 2 12 2C14.6954 2 16.959 2.99095 18.6909 4.60455L15.8227 7.47274C14.7864 6.48185 13.4681 5.97727 12 5.97727C9.39542 5.97727 7.19084 7.73637 6.40455 10.1C6.2045 10.7 6.09086 11.3409 6.09086 12C6.09086 12.6591 6.2045 13.3 6.40455 13.9C7.19084 16.2636 9.39542 18.0227 12 18.0227C13.3454 18.0227 14.4909 17.6682 15.3864 17.0682C16.4454 16.3591 17.15 15.3 17.3818 14.05H12V10.1818H21.4181C21.5364 10.8363 21.6 11.5182 21.6 12.2273C21.6 15.2727 20.5091 17.8363 18.6181 19.5773C16.9636 21.1046 14.7 22 12 22C8.09084 22 4.70909 19.7591 3.06364 16.4909C2.38638 15.1409 2 13.6136 2 12C2 10.3864 2.38638 8.85911 3.06364 7.50914Z" />
+                        </svg>
+                        Google
+                    </button>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fFirstName" class="form-label">First Name</label>
+                        <input type="text" id="fFirstName" name="fFirstName" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fLastName" class="form-label">Last Name</label>
+                        <input type="text" id="fLastName" name="fLastName" class="form-input" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fEmail" class="form-label">Email</label>
+                    <input type="email" id="fEmail" name="fEmail" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="fPhone" class="form-label">Phone Number</label>
+                    <input type="text" id="fPhone" name="fPhone" class="form-input" required placeholder="Phone Number" />
+                </div>
+                <div class="form-group">
+                    <label for="fPassword" class="form-label">Password</label>
+                    <input type="password" id="fPassword" name="fPassword" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="fConfirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" id="fConfirmPassword" name="fConfirmPassword" class="form-input" required>
+                </div>
+                <button type="submit" class="login-btn login-btn-primary">Sign up</button>
+            </form>
+            <p class="login-footer-text">Already have an account? <a href="login.html" class="login-link">Sign in</a></p>
+        </div>
+    </div>
+    <script src="js/login-particles.js"></script>
+    <!-- intl-tel-input JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+    // Toggle between Company and Freelancer forms
+    const companyBtn = document.getElementById('companyBtn');
+    const freelancerBtn = document.getElementById('freelancerBtn');
+    const companyForm = document.getElementById('companyForm');
+    const freelancerForm = document.getElementById('freelancerForm');
+    const signupChoiceMsg = document.getElementById('signupChoiceMsg');
+    const signupToggleRow = document.getElementById('signupToggleRow');
+    let selectedType = null;
+    companyBtn.classList.remove('active');
+    freelancerBtn.classList.remove('active');
+    companyForm.style.display = 'none';
+    freelancerForm.style.display = 'none';
+    const continueBtn = document.getElementById('continueBtn');
+    companyBtn.addEventListener('click', function() {
+        selectedType = 'company';
+        companyBtn.classList.add('active');
+        freelancerBtn.classList.remove('active');
+        continueBtn.disabled = false;
+    });
+    freelancerBtn.addEventListener('click', function() {
+        selectedType = 'freelancer';
+        freelancerBtn.classList.add('active');
+        companyBtn.classList.remove('active');
+        continueBtn.disabled = false;
+    });
+    continueBtn.addEventListener('click', function() {
+        signupChoiceMsg.style.display = 'none';
+        signupToggleRow.style.display = 'none';
+        if(selectedType === 'company') {
+            companyForm.style.display = '';
+            freelancerForm.style.display = 'none';
+        } else if(selectedType === 'freelancer') {
+            freelancerForm.style.display = '';
+            companyForm.style.display = 'none';
+        }
+    });
+    // Password match validation
+    document.querySelectorAll('.signup-form').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            const pw = form.querySelector('input[type="password"]');
+            const cpw = form.querySelector('input[name$="ConfirmPassword"]');
+            if (pw && cpw && pw.value !== cpw.value) {
+                alert('Passwords do not match!');
+                e.preventDefault();
+            }
+        });
+    });
+    // Password show/hide toggle
+    document.querySelectorAll('.toggle-password').forEach(function(eye) {
+        eye.addEventListener('click', function() {
+            const targetId = eye.getAttribute('data-target');
+            const input = document.getElementById(targetId);
+            const svg = eye.querySelector('svg');
+            if (input && svg) {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    svg.innerHTML = '<line x1="4" y1="20" x2="20" y2="4" stroke="#111" stroke-width="2"/>' + svg.innerHTML;
+                } else {
+                    input.type = 'password';
+                    // Remove the strike-through line
+                    const line = svg.querySelector('line');
+                    if (line) line.remove();
+                }
+            }
+        });
+        eye.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                eye.click();
+            }
+        });
+    });
+    // Initialize intl-tel-input for the phone field
+    if (document.getElementById('mobile_code')) {
+        var iti = window.intlTelInput(document.getElementById('mobile_code'), {
+            initialCountry: "in",
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+    }
+    // Initialize intl-tel-input for the freelancer phone field
+    if (document.getElementById('fPhone')) {
+        var itiFreelancer = window.intlTelInput(document.getElementById('fPhone'), {
+            initialCountry: "in",
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+    }
+    </script>
+    <style>
+    /* intl-tel-input full width and style match */
+    .intl-tel-input, .iti {
+        width: 100%;
+    }
+    .intl-tel-input .form-input, .iti .form-input {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 90px !important;
+        height: 44px;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        background: #fafbfc;
+    }
+    .intl-tel-input .iti__selected-flag {
+        border-radius: 8px 0 0 8px;
+    }
+    /* Social signup buttons */
+    .social-signup-row {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        justify-content: center;
+    }
+    .social-btn {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.7rem 1rem;
+        border-radius: 7px;
+        border: 1.5px solid #e5e7eb;
+        background: #fff;
+        color: #222;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s, border 0.2s;
+        box-shadow: 0 1px 4px rgba(1,4,10,0.04);
+    }
+    .social-btn:hover {
+        background: #f7f9fa;
+        border-color: #01040a;
+    }
+    .github-btn .social-icon {
+        width: 22px;
+        height: 22px;
+    }
+    .google-btn .social-icon {
+        width: 22px;
+        height: 22px;
+    }
+    </style>
+        <script src="js/cursor.js"></script>
+</body>
+</html>

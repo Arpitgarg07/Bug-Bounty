@@ -1,0 +1,416 @@
+/* signup.css - Standalone styles for the signup page, matching login look but fully independent */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.login-page-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.login-card {
+    border-radius: 20px;
+    background-color: rgb(247, 249, 250, 0.95);
+    padding: 3rem 2.2rem 2.5rem 2.2rem;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 3rem 0;
+    row-gap: 0rem;
+}
+
+.login-logo-fixed {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+}
+
+.login-title {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #01040a;
+    margin-bottom: 2.1rem;
+    text-align: center;
+}
+
+.signup-toggle-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0.7rem;
+}
+.signup-toggle-btns-group {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+.signup-toggle-btn {
+    height: 70px;
+    flex: 1 1 0;
+    min-width: 140px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1.5px solid #2e2e2e;
+    background: #fff;
+    color: #222;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.signup-toggle-btn.active {
+    background: #080808;
+    color: #fff;
+    border-color: #222;
+}
+.signup-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    animation: fadeIn 0.4s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: none; }
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: stretch;
+    margin-bottom: 0.7rem;
+}
+.form-label {
+    font-size: 1.04rem;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+}
+.form-input {
+    padding: 0.6rem 0.85rem;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 7px;
+    font-size: 1.04rem;
+    outline: none;
+    transition: border 0.2s;
+    background: #f9fafb;
+    color: #01040a;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form-input:focus {
+    border-color: #01040a;
+    background: #fff;
+}
+.login-btn,
+.login-btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: .8rem 1rem;
+    border-radius: 8px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    text-decoration: none;
+    outline: none;
+    justify-content: center;
+    min-width: 150px;
+    box-sizing: border-box;
+    margin-top: 0rem;
+    letter-spacing: 0.01em;
+    box-shadow: 0 2px 8px rgba(1,4,10,0.07);
+    background: #01040a;
+    color: #fff;
+}
+.login-btn-primary:hover {
+    background: #222;
+}
+.login-footer-text {
+    margin-top: 1.5rem;
+    font-size: 0.98rem;
+    color: #444;
+    text-align: center;
+}
+.login-link {
+    color: #01040a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.login-link:hover {
+    color: #222;
+    text-decoration: underline;
+}
+#signupChoiceMsg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+#continueBtn {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 440px;
+    min-width: 140px;
+    /* Match the width of the toggle row */
+    box-sizing: border-box;
+}
+.signup-continue-btn {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin-top: 0;
+    align-self: stretch;
+}
+/* --- Company form layout improvements --- */
+.form-row {
+    display: flex;
+    gap: 1.2rem;
+    width: 100%;
+}
+.form-row .form-group {
+    flex: 1 1 0;
+    margin-bottom: 0;
+}
+.phone-row {
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+}
+.country-code-select {
+    max-width: 110px;
+    min-width: 80px;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    border-radius: 7px;
+    border: 1.5px solid #e5e7eb;
+    background: #f9fafb;
+    color: #01040a;
+    height: 44px;
+}
+.phone-input {
+    flex: 1 1 0;
+    min-width: 0;
+}
+.password-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.password-input {
+    flex: 1 1 0;
+    min-width: 0;
+}
+.toggle-password {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #888;
+    margin-left: 0.3rem;
+    user-select: none;
+    transition: color 0.2s;
+}
+.toggle-password:hover {
+    color: #01040a;
+}
+/* --- Custom country dropdown with flag images --- */
+.custom-country-dropdown {
+    position: relative;
+    width: 170px;
+    min-width: 120px;
+    max-width: 220px;
+    font-size: 1rem;
+    z-index: 10;
+}
+.selected-country {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f9fafb;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 7px;
+    padding: 0.6rem 0.85rem;
+    cursor: pointer;
+    min-height: 44px;
+    user-select: none;
+}
+.selected-country .country-flag {
+    width: 22px;
+    height: 16px;
+    object-fit: contain;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.selected-country .country-code {
+    font-weight: 600;
+    color: #222;
+    margin-left: 0.2rem;
+}
+.country-list {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1.5px solid #e7e7eb;
+    border-radius: 7px;
+    box-shadow: 0 4px 16px rgba(1,4,10,0.08);
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 100;
+    margin-top: 2px;
+}
+.country-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.85rem;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.country-option:hover {
+    background: #f0f2f5;
+}
+.country-option .country-flag {
+    width: 22px;
+    height: 16px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+.country-option .country-code {
+    font-weight: 600;
+    color: #222;
+    margin-left: auto;
+}
+@media (min-width: 400px) {
+    .signup-toggle-row, #continueBtn {
+        max-width: 440px;
+    }
+}
+@media (max-width: 399px) {
+    .signup-toggle-row, #continueBtn {
+        max-width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .login-card {
+        padding: 1.5rem 0.7rem 1.5rem 0.7rem;
+        margin: 1.2rem 0;
+    }
+    .login-title {
+        margin-bottom: 1.2rem;
+    }
+    .signup-toggle-row {
+        margin-bottom: 1.2rem;
+    }
+    #signupChoiceMsg {
+        margin-bottom: 1rem;
+    }
+    .signup-form {
+        margin-bottom: 1.2rem;
+        gap: 1rem;
+    }
+    .form-group {
+        margin-bottom: 0.4rem;
+    }
+    .login-footer-text {
+        margin-top: 1.2rem;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .phone-row {
+        flex-direction: column;
+        gap: 0.4rem;
+        align-items: stretch;
+    }
+}
+canvas#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background: #f7f9fa;
+}
+#continueBtn:disabled {
+    background: #e5e7eb;
+    color: #aaa;
+    cursor: not-allowed;
+    border: 1.5px solid #e5e7eb;
+    box-shadow: none;
+    opacity: 0.85;
+    transition: background 0.2s, color 0.2s;
+}
+#continueBtn:not(:disabled) {
+    background: #01040a;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(1,4,10,0.07);
+    opacity: 1;
+    transition: background 0.2s, color 0.2s;
+}
+/* --- intl-tel-input fix for input/country select overlap (force input padding) --- */
+.intl-tel-input .form-input, .iti .form-input {
+    padding-left: 90px !important;
+}
+.intl-tel-input .iti__flag-container {
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+.intl-tel-input .iti__selected-flag {
+    min-width: 70px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    background: #f9fafb;
+    box-shadow: 0 1px 2px rgba(1,4,10,0.04);
+    pointer-events: auto;
+}
+@media (max-width: 600px) {
+    .intl-tel-input input.form-input {
+        padding-left: 60px !important;
+    }
+    .intl-tel-input .iti__flag-container,
+    .intl-tel-input .iti__selected-flag {
+        min-width: 50px;
+        width: 50px;
+        height: 40px;
+    }
+}

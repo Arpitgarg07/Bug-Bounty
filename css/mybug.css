@@ -1,0 +1,109 @@
+/* Minimal horizontal bug list for mybug page with bright text for dark background */
+.mybug-main {
+  max-width: 1140px;
+  margin: 48px auto 80px auto;
+  padding: 0 1.5rem;
+}
+.mybug-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.mybug-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  margin-top: 4rem;
+  letter-spacing: 1px;
+  font-family: 'Urbanist', sans-serif;
+  color: #fff;
+}
+.mybug-desc {
+  color: #e0e0e0;
+  font-size: 1.08rem;
+  margin-bottom: 0.5rem;
+}
+.mybug-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.mybug-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid #e0e0e0;
+  padding: 1.1rem 1.2rem;
+  border-radius: 10px;
+}
+.mybug-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.mybug-name {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #fff;
+  min-width: 180px;
+}
+.mybug-status {
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 0.18rem 0.7rem;
+  border-radius: 6px;
+  margin: 0 1.2rem 0 0.5rem;
+  display: inline-block;
+  min-width: 110px;
+  text-align: center;
+}
+.mybug-status.active {
+  background: #0ea5e9;
+  color: #fff;
+}
+.mybug-status.review {
+  background: #f59e42;
+  color: #fff;
+}
+.mybug-status.completed {
+  background: #10b981;
+  color: #fff;
+}
+.mybug-btn, .mybug-details-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: 0.7rem;
+}
+.mybug-btn:hover, .mybug-details-btn:hover {
+  background: #1e40af;
+}
+.mybug-details-btn {
+  background: #10b981;
+}
+.mybug-details-btn:hover {
+  background: #059669;
+}
+@media (max-width: 600px) {
+  .mybug-main {
+    padding: 0 0.3rem;
+  }
+  .mybug-title {
+    font-size: 1.4rem;
+  }
+  .mybug-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    padding: 0.7rem 0.5rem;
+  }
+  .mybug-name, .mybug-status {
+    min-width: unset;
+  }
+}

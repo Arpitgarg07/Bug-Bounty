@@ -1,0 +1,211 @@
+.blog-main {
+        max-width: 1300px;
+        margin: 48px auto 80px auto;
+        padding: 0 2rem;
+      }
+      .blog-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .blog-title {
+        font-size: 2.8rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 0.7rem;
+        margin-top: 4rem;
+        font-family: 'Urbanist', sans-serif;
+        color: white;
+      }
+      .blog-desc {
+        color: #7e7e7e;
+        font-size: 1.18rem;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+      .blog-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 2.2rem;
+      }
+      .blog-card {
+        background: linear-gradient(135deg, #f8fafc 80%, #e9f0ff 100%);
+        border-radius: 18px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+        padding: 2.2rem 1.7rem 1.7rem 1.7rem;
+        border: 1px solid #e3e8ee;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 260px;
+        transition: box-shadow 0.2s, transform 0.2s;
+        position: relative;
+      }
+      .blog-card:hover {
+        box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+        transform: translateY(-4px) scale(1.02);
+      }
+      .blog-card-title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        color: #d4d4d4;
+        font-family: 'Urbanist', sans-serif;
+      }
+      .blog-card-meta {
+        font-size: 0.98rem;
+        color: #7a869a;
+        margin-bottom: 0.7rem;
+        font-weight: 500;
+      }
+      .blog-card-excerpt {
+        font-size: 1.08rem;
+        color: #b8aeae;
+        margin-bottom: 1.1rem;
+        flex: 1;
+      }
+      .blog-read-more {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+        align-self: flex-start;
+        border-radius: 6px;
+        padding: 0.3rem 0.7rem;
+        background: #e0e7ff;
+        transition: background 0.2s, color 0.2s;
+      }
+      .blog-read-more:hover {
+        color: #fff;
+        background: #2563eb;
+        text-decoration: none;
+      }
+      /* Geometric shapes for elegant blog cards */
+.blog-card-geo {
+  position: relative;
+  overflow: hidden;
+  padding-top: 2.7rem;
+}
+.blog-geo-shape {
+  position: absolute;
+  top: 0.7rem;
+  left: 1.2rem;
+  z-index: 1;
+  opacity: 0.18;
+}
+.blog-geo-triangle {
+  width: 48px;
+  height: 48px;
+  background: none;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(135deg, #2563eb 60%, #e0e7ff 100%);
+}
+.blog-geo-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f59e42 60%, #f8fafc 100%);
+}
+.blog-geo-hex {
+  width: 48px;
+  height: 48px;
+  background: none;
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  background: linear-gradient(135deg, #10b981 60%, #e0f7fa 100%);
+}
+.blog-card-1 .blog-geo-shape { left: 1.2rem; top: 0.7rem; }
+.blog-card-2 .blog-geo-shape { left: 1.2rem; top: 0.7rem; }
+.blog-card-3 .blog-geo-shape { left: 1.2rem; top: 0.7rem; }
+
+.blog-card-title, .blog-card-meta, .blog-card-excerpt, .blog-read-more {
+  position: relative;
+  z-index: 2;
+}
+      /* Bento grid layout for geometric elegance */
+.blog-bento-grid {
+  display: grid;
+  grid-template-areas:
+    "major major square1"
+    "major major square2"
+    "square3 square4 square5";
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+.blog-card-major {
+  grid-area: major;
+  min-height: 420px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+  border: 2px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.blog-card-square {
+  min-height: 200px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1.7rem 1.2rem 1.2rem 1.2rem;
+  border: 2px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.blog-card-square:nth-of-type(2) { grid-area: square1; }
+.blog-card-square:nth-of-type(3) { grid-area: square2; }
+.blog-card-square:nth-of-type(4) { grid-area: square3; }
+.blog-card-square:nth-of-type(5) { grid-area: square4; }
+.blog-card-square:nth-of-type(6) { grid-area: square5; }
+
+@media (max-width: 900px) {
+  .blog-bento-grid {
+    grid-template-areas:
+      "major"
+      "square1"
+      "square2"
+      "square3"
+      "square4"
+      "square5";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .blog-card-major {
+    min-height: 280px;
+    padding: 1.7rem 1rem;
+  }
+  .blog-card-square {
+    min-height: 140px;
+    padding: 1rem 0.7rem;
+  }
+}
+      @media (max-width: 900px) {
+        .blog-main {
+          padding: 0 0.7rem;
+        }
+        .blog-list {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .blog-main {
+          padding: 0 0.3rem;
+        }
+        .blog-title {
+          font-size: 2rem;
+        }
+        .blog-list {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+        }
+        .blog-card {
+          padding: 1.2rem 0.7rem;
+          min-height: 180px;
+        }
+      }

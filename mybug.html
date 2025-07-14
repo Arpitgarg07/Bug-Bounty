@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Bug Bounty</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/stylemobile.css">
+    <link rel="stylesheet" href="css/mybug.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="fullpage">
+        <div id="cursor-border"></div>
+        <!-- <div class="page-hide"> -->
+<div class="nav-div">
+    <nav>
+        <div class="bar">
+            <div class="bar-elements">
+              <div class="mob-nav-ele">
+                <p class="nav-logo"><span>BUG</span> <span>BOUNTY</span></p>
+              </div>
+              
+                <div class="bar-ele-but">
+                    <div class="left">
+                        <h4><a href="index.html" class="active" style="text-decoration: none; color: #ffffff;">Home</a></h4>
+                        <h4><a href="#" style="text-decoration: none; color: #ffffff;">My Bugs</a></h4>
+                    </div>
+                    <div class="center">
+                      <img class="img-logo" src="images/logo.png" alt="logo">
+                  </div>
+                    <div class="right">
+                        <h4><a href="#faq-section" style="text-decoration: none; color: #ffffff;">FAQ</a></h4>
+                        <button id="discoverButton" class="ui-btn">
+                          <span>
+                            Dashboard
+                          </span>
+                        </button>
+                            <!-- <h4><a style="text-decoration: none; color: #02cccc; font-size: 1.08rem; font-weight: 900;" href="#"><b>Go to Dashboard</b></a></h4> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+      </nav>
+      </div>
+
+    <main class="mybug-main">
+      <section class="mybug-header">
+        <h1 class="mybug-title">My Bugs & Programs</h1>
+        <p class="mybug-desc">Track your progress and status in bug bounty programs.</p>
+      </section>
+      <section class="mybug-list">
+        <div class="mybug-item">
+          <span class="mybug-name">Login Page XSS</span>
+          <span class="mybug-status active">Active</span>
+          <button class="mybug-btn" onclick="window.location.href='bug.html'">View</button>
+          <button class="mybug-details-btn" onclick="window.location.href='bug.html'">Details</button>
+        </div>
+        <div class="mybug-item">
+          <span class="mybug-name">API Rate Limit Bypass</span>
+          <span class="mybug-status review">Under Review</span>
+          <button class="mybug-btn" onclick="window.location.href='bug.html'">View</button>
+          <button class="mybug-details-btn" onclick="window.location.href='bug.html'">Details</button>
+        </div>
+        <div class="mybug-item">
+          <span class="mybug-name">SQL Injection in Reports</span>
+          <span class="mybug-status completed">Completed</span>
+          <button class="mybug-btn" onclick="window.location.href='bug.html'">View</button>
+          <button class="mybug-details-btn" onclick="window.location.href='bug.html'">Details</button>
+        </div>
+        <div class="mybug-item">
+          <span class="mybug-name">Broken Authentication</span>
+          <span class="mybug-status active">Active</span>
+          <button class="mybug-btn" onclick="window.location.href='bug.html'">View</button>
+          <button class="mybug-details-btn" onclick="window.location.href='bug.html'">Details</button>
+        </div>
+      </section>
+    </main>
+
+    <hr style="align-items: center; justify-self: center; border: 1.5px solid rgb(255, 255, 255); width: 1536px; border-radius: 5px;">
+    <footer>
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="images/footer-vec.png" alt="footer-vec"/>
+          </div>
+          <div class="footer-txt-link">
+          <div class="footer-text">
+            <h3>
+              We love <span class="blue">debugging</span><br> and the <span class="orange">experts</span><br> who make it possible.
+            </h3>
+          </div>
+          <div class="footer-links">
+            <div class="community">
+              <h4>Community</h4>
+              <ul>
+                <li><a href="#">Debug the code</a></li>
+                <li><a href="#">Explore the bugs</a></li>
+                <li><a href="#">Code of Conduct</a></li>
+              </ul>
+            </div>
+            <div class="quick-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Telegram</a></li>
+              </ul>
+            </div>
+            <div class="support">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+          </div>
+      
+          <hr style="border: 1.5px solid rgb(255, 255, 255); margin-top: 65px; width: 1200px; border-radius: 5px;">
+      
+          <div class="footer-bottom">
+      
+            <p class="logo-footer"><span>BUG</span> <span>BOUNTY</span></p>
+            <p>
+              Built at BugBusters. Crafted with expertise, passion, and a suite of
+              powerful tools to help identify and fix vulnerabilities. We are
+              grateful for the contributions of our talented community.
+            </p>
+          </div>
+          <div class="footer-bottom-copyright">
+            <p>@ 2024, XYZ Classic PTE LTD</p>
+          </div>
+        </div>
+      </footer>
+      </div>
+<script src="js/script.js"></script>
+<script src="js/global.js"></script>
+<script src="js/cursor.js"></script>
+</body>
+</html>

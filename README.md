@@ -8,6 +8,7 @@
 	<img src="https://img.shields.io/github/last-commit/Arpitgarg07/Bug-Bounty?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/Arpitgarg07/Bug-Bounty?style=default&color=0080ff" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/Arpitgarg07/Bug-Bounty?style=default&color=0080ff" alt="repo-language-count">
+	<img src="https://visitor-badge.laobi.icu/badge?page_id=Arpitgarg07.Bug-Bounty&left_text=total%20views" alt="total repository views">
 </p>
 <p align="center"><!-- default option, no dependency badges. -->
 </p>
@@ -25,8 +26,9 @@
 - [🚀 Getting Started](#-getting-started)
   - [☑️ Prerequisites](#-prerequisites)
   - [⚙️ Installation](#-installation)
-  - [🤖 Usage](#🤖-usage)
-  - [🧪 Testing](#🧪-testing)
+	- [🤖 Usage](#-usage)
+	- [🧪 Testing](#-testing)
+- [🔐 Environment Configuration](#-environment-configuration)
 - [📌 Project Roadmap](#-project-roadmap)
 - [🔰 Contributing](#-contributing)
 - [🎗 License](#-license)
@@ -292,7 +294,10 @@
 
 Before getting started with Bug-Bounty, ensure your runtime environment meets the following requirements:
 
-- **Programming Language:** CSS
+- **Node.js:** 20 or newer
+- **npm:** Included with Node.js
+- **PostgreSQL:** A running PostgreSQL instance and two databases: an application database and a Prisma shadow database
+- **Git:** Required to clone the repository
 
 
 ### ⚙️ Installation
@@ -308,22 +313,57 @@ Install Bug-Bounty using one of the following methods:
 
 2. Navigate to the project directory:
 ```sh
-❯ cd Bug-Bounty
+cd Bug-Bounty
 ```
 
-3. Install the project dependencies:
+3. Install backend dependencies:
+```sh
+cd backend
+npm install
+```
 
-echo 'INSERT-INSTALL-COMMAND-HERE'
+4. Create the local environment file:
+```sh
+Copy-Item .env.example .env
+```
+
+Edit `backend/.env` with your local PostgreSQL connection strings and service credentials. Keep this file private; it is excluded by `.gitignore`.
+
+5. Generate the Prisma client and apply migrations:
+```sh
+npm run prisma:generate
+npm run prisma:migrate
+```
+
+6. In a second terminal, serve the static frontend from the repository root:
+```sh
+npx http-server -p 3000
+```
 
 
 
 ### 🤖 Usage
-Run Bug-Bounty using the following command:
-echo 'INSERT-RUN-COMMAND-HERE'
+Start the backend from `backend/`:
+```sh
+npm run dev
+```
+
+Open the frontend at [http://localhost:3000](http://localhost:3000). The backend API is available at [http://localhost:4000](http://localhost:4000), with its health check at [http://localhost:4000/health](http://localhost:4000/health).
 
 ### 🧪 Testing
-Run the test suite using the following command:
-echo 'INSERT-TEST-COMMAND-HERE'
+Run the backend type check and production build:
+```sh
+cd backend
+npm run typecheck
+npm run build
+```
+
+---
+## 🔐 Environment Configuration
+
+Use [backend/.env.example](backend/.env.example) as the complete configuration reference. It documents application URLs, PostgreSQL, Prisma, JWT, cookies, Cloudinary, email, rate limiting, uploads, Google OAuth, and administrator bootstrap settings.
+
+Never commit `backend/.env`, API keys, database passwords, OAuth secrets, JWT secrets, or email-provider credentials. Generate fresh JWT secrets for each environment and rotate any credential that has been exposed.
 
 ---
 ## 📌 Project Roadmap

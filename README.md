@@ -1,430 +1,173 @@
+# Bug Bounty Platform
 
-<p align="center"><h1 align="center">BUG-BOUNTY</h1></p>
-<p align="center">
-	<em><code>❯ Transforming bug hunting into opportunities with our unique platform </code></em>
-</p>
-<p align="center">
-	<img src="https://img.shields.io/github/license/Arpitgarg07/Bug-Bounty?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
-	<img src="https://img.shields.io/github/last-commit/Arpitgarg07/Bug-Bounty?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/Arpitgarg07/Bug-Bounty?style=default&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/Arpitgarg07/Bug-Bounty?style=default&color=0080ff" alt="repo-language-count">
-	<img src="https://visitor-badge.laobi.icu/badge?page_id=Arpitgarg07.Bug-Bounty&left_text=total%20views" alt="total repository views">
-</p>
-<p align="center"><!-- default option, no dependency badges. -->
-</p>
-<p align="center">
-	<!-- default option, no dependency badges. -->
-</p>
-<br>
+A full-stack bug bounty platform with a static HTML/CSS/JS frontend and a TypeScript + Express + Prisma backend.
 
-## 🔗 Table of Contents
+## What this repository contains
 
-- [📍 Overview](#-overview)
-- [👾 Features](#-features)
-- [📁 Project Structure](#-project-structure)
-  - [📂 Project Index](#-project-index)
-- [🚀 Getting Started](#-getting-started)
-  - [☑️ Prerequisites](#-prerequisites)
-  - [⚙️ Installation](#-installation)
-	- [🤖 Usage](#-usage)
-	- [🧪 Testing](#-testing)
-- [🔐 Environment Configuration](#-environment-configuration)
-- [📌 Project Roadmap](#-project-roadmap)
-- [🔰 Contributing](#-contributing)
-- [🎗 License](#-license)
-- [🙌 Acknowledgments](#-acknowledgments)
+- User authentication (email/password + Google OAuth)
+- Company profile creation
+- Program (bounty) creation and listing
+- Bug report submission and user report tracking
+- Newsletter subscription endpoint
+- Multi-page frontend with protected routes for authenticated users
 
----
+## Tech stack
 
-## 📍 Overview
+### Frontend
+- HTML, CSS, vanilla JavaScript
+- Static hosting (served locally with `http-server`)
 
-<code>❯ Bug-Bounty is a platform that bridges the gap between organizations and skilled debuggers. Companies can register and post their projects or websites for security testing, while debuggers can find and fix bugs to earn rewards, certifications, and badges. It’s an ecosystem designed to enhance cybersecurity while providing meaningful opportunities for developers.</code>
+### Backend
+- Node.js + TypeScript
+- Express 5
+- Prisma ORM
+- PostgreSQL
+- Zod validation
+- JWT-based authentication
 
----
+## Project structure
 
-## 👾 Features
-
-<code>❯ 
-🐞 Post bugs and bounty programs as an organization
-🧠 Register as a skilled debugger and earn rewards
-🏆 Earn badges and certifications based on performance
-📊 Leaderboard to track top-performing debuggers
-🔐 Secure submission of bug reports
-📄 Certificate generation after successfully solving bugs
-💬 Discord community integration for collaboration
-
-</code>
-
----
-
-## 📁 Project Structure
-
-```sh
-└── Bug-Bounty/
-    ├── README.md
-    ├── admin.html
-    ├── bounties.html
-    ├── bug.html
-    ├── builders.html
-    ├── card.html
-    ├── css
-    │   ├── admin.css
-    │   ├── bounties.css
-    │   ├── bug.css
-    │   ├── builders.css
-    │   ├── card.css
-    │   ├── dashboard.css
-    │   ├── discover.css
-    │   ├── footer.css
-    │   ├── global.css
-    │   ├── nav.css
-    │   ├── newbug.css
-    │   ├── profile.css
-    │   ├── style.css
-    │   └── stylemobile.css
-    ├── discover.html
-    ├── images
-    │   ├── activity.png
-    │   ├── badge.png
-    │   ├── bug.png
-    │   ├── coin.png
-    │   ├── corner.png
-    │   ├── discord-vec.png
-    │   ├── email-vec.png
-    │   ├── faq-vec.png
-    │   ├── fav
-    │   ├── feature.avif
-    │   ├── footer-vec.png
-    │   ├── head-corner.png
-    │   ├── header.png
-    │   ├── hot-event.png
-    │   ├── logo.png
-    │   ├── profile.png
-    │   ├── sec1-img1.png
-    │   ├── sec2-img2.png
-    │   ├── sec3-img3.png
-    │   ├── section1-img.png
-    │   ├── seo
-    │   ├── vector1.png
-    │   ├── vector2.png
-    │   ├── vector4.png
-    │   └── vector5.png
-    ├── index.html
-    ├── js
-    │   ├── bug.js
-    │   ├── builders.js
-    │   ├── cursor.js
-    │   ├── dashboard.js
-    │   ├── discover.js
-    │   ├── global.js
-    │   ├── robo.js
-    │   └── script.js
-    ├── newbug.html
-    └── profile.html
+```text
+Bug-Bounty/
+├── index.html                # Landing page
+├── login.html                # Login page
+├── signup.html               # Signup page (freelancer/company)
+├── auth-callback.html        # OAuth callback page
+├── discover.html             # Dashboard (protected)
+├── mybug.html                # User reports page (protected)
+├── newbug.html               # New bug UI page (protected)
+├── profile.html              # Profile page (protected)
+├── bounties.html             # Bounties listing UI
+├── bug.html                  # Bug details UI
+├── blog.html                 # Blog page
+├── builders.html             # Builders page
+├── admin.html                # Admin UI page
+├── card.html
+├── preloader.html
+├── compiler.html
+├── css/                      # Page-level and shared styles
+├── js/                       # Frontend behavior/auth/navigation scripts
+├── images/                   # Static assets and favicon set
+├── backend/
+│   ├── prisma/
+│   │   ├── schema.prisma     # Database schema
+│   │   └── migrations/       # Prisma migrations
+│   ├── src/
+│   │   ├── app.ts            # Express app + middleware + route mounting
+│   │   ├── server.ts         # HTTP server bootstrap/shutdown
+│   │   ├── config/           # Env, logger, prisma, passport config
+│   │   ├── common/           # Shared API/error helpers
+│   │   ├── middleware/       # Error middleware
+│   │   ├── services/         # Email service
+│   │   └── modules/
+│   │       ├── auth/
+│   │       ├── company/
+│   │       ├── program/
+│   │       ├── report/
+│   │       └── notification/
+│   └── package.json
+├── start.sh                  # Start backend + frontend (Unix)
+├── start.bat                 # Start backend + frontend (Windows)
+├── start-backend.sh          # Start backend only (Unix)
+└── start-backend.bat         # Start backend only (Windows)
 ```
 
+## Backend API routes
 
-### 📂 Project Index
-<details open>
-	<summary><b><code>BUG-BOUNTY/</code></b></summary>
-	<details> <!-- __root__ Submodule -->
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/bug.html'>bug.html</a></b></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/card.html'>card.html</a></b></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/newbug.html'>newbug.html</a></b></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/profile.html'>profile.html</a></b></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/discover.html'>discover.html</a></b></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/admin.html'>admin.html</a></b></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/bounties.html'>bounties.html</a></b></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/index.html'>index.html</a></b></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/builders.html'>builders.html</a></b></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- css Submodule -->
-		<summary><b>css</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/newbug.css'>newbug.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/style.css'>style.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/stylemobile.css'>stylemobile.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/discover.css'>discover.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/footer.css'>footer.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/builders.css'>builders.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/dashboard.css'>dashboard.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/bounties.css'>bounties.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/bug.css'>bug.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/admin.css'>admin.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/nav.css'>nav.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/global.css'>global.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/card.css'>card.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/css/profile.css'>profile.css</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- js Submodule -->
-		<summary><b>js</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/js/bug.js'>bug.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/js/builders.js'>builders.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/js/robo.js'>robo.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/js/discover.js'>discover.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/js/script.js'>script.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/js/cursor.js'>cursor.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/js/dashboard.js'>dashboard.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/js/global.js'>global.js</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- images Submodule -->
-		<summary><b>images</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/images/feature.avif'>feature.avif</a></b></td>
-				<td><code>❯ REPLACE-ME</code></td>
-			</tr>
-			</table>
-			<details>
-				<summary><b>fav</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href='https://github.com/Arpitgarg07/Bug-Bounty/blob/master/images/fav/site.webmanifest'>site.webmanifest</a></b></td>
-						<td><code>❯ REPLACE-ME</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-</details>
+Base URL: `http://localhost:4000/api/v1`
 
----
-## 🚀 Getting Started
+### Auth
+- `POST /auth/register`
+- `POST /auth/login`
+- `GET /auth/me` (auth required)
+- `GET /auth/google`
+- `GET /auth/google/callback`
 
-### ☑️ Prerequisites
+### Company
+- `POST /company` (auth required)
+- `GET /company/me` (auth required)
 
-Before getting started with Bug-Bounty, ensure your runtime environment meets the following requirements:
+### Program
+- `POST /program` (auth required)
+- `GET /program`
+- `GET /program/:id`
+- `PATCH /program/:id/activate` (auth required)
 
-- **Node.js:** 20 or newer
-- **npm:** Included with Node.js
-- **PostgreSQL:** A running PostgreSQL instance and two databases: an application database and a Prisma shadow database
-- **Git:** Required to clone the repository
+### Report
+- `POST /report` (auth required)
+- `GET /report/my` (auth required)
+- `GET /report/:id` (auth required)
 
+### Notification
+- `POST /notification/subscribe`
 
-### ⚙️ Installation
+### Health
+- `GET /health`
 
-Install Bug-Bounty using one of the following methods:
+## Local setup
 
-**Build from source:**
+## 1) Install dependencies
 
-1. Clone the Bug-Bounty repository:
-```sh
-❯ git clone https://github.com/Arpitgarg07/Bug-Bounty
-```
-
-2. Navigate to the project directory:
-```sh
-cd Bug-Bounty
-```
-
-3. Install backend dependencies:
-```sh
+```bash
+# backend dependencies
 cd backend
 npm install
 ```
 
-4. Create the local environment file:
-```sh
-Copy-Item .env.example .env
-```
+## 2) Configure environment
 
-Edit `backend/.env` with your local PostgreSQL connection strings and service credentials. Keep this file private; it is excluded by `.gitignore`.
+Create `backend/.env` and provide all variables required by `backend/src/config/env.ts`.
 
-5. Generate the Prisma client and apply migrations:
-```sh
+## 3) Run database migrations
+
+```bash
+cd backend
 npm run prisma:generate
 npm run prisma:migrate
 ```
 
-6. In a second terminal, serve the static frontend from the repository root:
-```sh
-npx http-server -p 3000
-```
+## 4) Start backend
 
-
-
-### 🤖 Usage
-Start the backend from `backend/`:
-```sh
+```bash
+cd backend
 npm run dev
 ```
 
-Open the frontend at [http://localhost:3000](http://localhost:3000). The backend API is available at [http://localhost:4000](http://localhost:4000), with its health check at [http://localhost:4000/health](http://localhost:4000/health).
+Backend runs on `http://localhost:4000`.
 
-### 🧪 Testing
-Run the backend type check and production build:
-```sh
-cd backend
-npm run typecheck
-npm run build
+## 5) Start frontend
+
+From repository root:
+
+```bash
+npx http-server -p 3000
 ```
 
----
-## 🔐 Environment Configuration
+Frontend runs on `http://localhost:3000`.
 
-Use [backend/.env.example](backend/.env.example) as the complete configuration reference. It documents application URLs, PostgreSQL, Prisma, JWT, cookies, Cloudinary, email, rate limiting, uploads, Google OAuth, and administrator bootstrap settings.
+## Frontend authentication behavior
 
-Never commit `backend/.env`, API keys, database passwords, OAuth secrets, JWT secrets, or email-provider credentials. Generate fresh JWT secrets for each environment and rotate any credential that has been exposed.
+- Session tokens/user are stored in `localStorage` (`bb_access_token`, `bb_refresh_token`, `bb_user`)
+- Protected pages call `requireAuth()` and redirect to `login.html` when not authenticated
+- API helper is centralized in `js/auth.js`
 
----
-## 📌 Project Roadmap
+## Scripts
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+### Root
+- `start.sh` / `start.bat`: starts backend and frontend
+- `start-backend.sh` / `start-backend.bat`: starts backend only
 
----
+### Backend (`backend/package.json`)
+- `npm run dev`
+- `npm run build`
+- `npm run start`
+- `npm run typecheck`
+- `npm run lint`
+- `npm run prisma:generate`
+- `npm run prisma:migrate`
+- `npm run prisma:deploy`
+- `npm run prisma:studio`
 
-## 🔰 Contributing
+## License
 
-- **💬 [Join the Discussions](https://github.com/Arpitgarg07/Bug-Bounty/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://github.com/Arpitgarg07/Bug-Bounty/issues)**: Submit bugs found or log feature requests for the `Bug-Bounty` project.
-- **💡 [Submit Pull Requests](https://github.com/Arpitgarg07/Bug-Bounty/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-
-<details closed>
-<summary>Contributing Guidelines</summary>
-
-1. **Fork the Repository**: Start by forking the project repository to your github account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
-   ```sh
-   git clone https://github.com/Arpitgarg07/Bug-Bounty
-   ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
-   ```sh
-   git commit -m 'Implemented new feature x.'
-   ```
-6. **Push to github**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
-
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://github.com{/Arpitgarg07/Bug-Bounty/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=Arpitgarg07/Bug-Bounty">
-   </a>
-</p>
-</details>
-
----
-
-## 🎗 License
-
-This project is protected under the [MIT LICENCE].
-
----
-
-## 🙌 Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
-
----
+MIT (see `LICENSE`).

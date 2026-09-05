@@ -1,59 +1,86 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const slider = document.querySelector('.tab-slider');
-  const bar = document.querySelector('.tab-bar');
-  const buttons = document.querySelectorAll('.tab-button');
+(function () {
+  const tabRoutes = ['discover.html', 'bounties.html', 'builders.html'];
 
-  // Get the last active index from localStorage (default to 0 if not set)
-  let lastActiveIndex = localStorage.getItem('lastActiveTabIndex') 
-    ? parseInt(localStorage.getItem('lastActiveTabIndex')) 
-    : 0;
+  function getCurrentTabIndex() {
+    const currentPage = window.location.pathname.toLowerCase();
 
-  // Determine the current active tab based on the page
-  const currentPage = window.location.pathname;
-  let activeIndex = lastActiveIndex; // Start with the last active index
+    if (currentPage.includes('discover.html')) return 0;
+    if (currentPage.includes('bounties.html')) return 1;
+    if (currentPage.includes('builders.html')) return 2;
 
-  if (currentPage.includes('discover.html')) {
-    activeIndex = 0;
-  } else if (currentPage.includes('bounties.html')) {
-    activeIndex = 1;
-  } else if (currentPage.includes('builders.html')) {
-    activeIndex = 2;
+    const storedIndex = Number.parseInt(localStorage.getItem('lastActiveTabIndex'), 10);
+    return Number.isNaN(storedIndex) ? 0 : storedIndex;
   }
 
-  // Save the active index to localStorage to maintain consistency
-  localStorage.setItem('lastActiveTabIndex', activeIndex);
+  function setActiveTab(index) {
+    const safeIndex = tabRoutes[index] ? index : 0;
+    const slider = document.querySelector('.tab-slider');
+    const buttons = document.querySelectorAll('.tab-button');
 
-  // Set the initial slider and bar position
-  slider.style.transform = `translateX(${activeIndex * 100}%)`;
-  bar.style.transform = `translateX(${activeIndex * 100}%)`;
+    localStorage.setItem('lastActiveTabIndex', String(safeIndex));
 
-  // Update the active button styles based on the active index
-  buttons.forEach((button, index) => {
-    button.classList.toggle('active', index === activeIndex);
-  });
-
-  // Handle button clicks
-  buttons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-      // Save the clicked tab's index before redirection
-      localStorage.setItem('lastActiveTabIndex', index);
-
-      // Animate the slider and bar
+    if (slider) {
       slider.style.transition = 'transform 0.3s ease';
-      bar.style.transition = 'transform 0.3s ease';
-      slider.style.transform = `translateX(${index * 100}%)`;
-      bar.style.transform = `translateX(${index * 100}%)`;
+      slider.style.transform = `translateX(${safeIndex * 100}%)`;
+    }
 
-      // Update the active button styles
-      buttons.forEach((btn) => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      // Redirect to the appropriate page after animation
-      setTimeout(() => {
-        if (index === 0) window.location.href = 'discover.html';
-        if (index === 1) window.location.href = 'bounties.html';
-        if (index === 2) window.location.href = 'builders.html';
-      }, 300); // Match the delay with the animation duration
+    buttons.forEach((button, buttonIndex) => {
+      button.classList.toggle('active', buttonIndex === safeIndex);
     });
-  });
-});
+  }
+
+  window.switchTab = function switchTab(event, index) {
+    if (event) {
+      event.preventDefault();
+    }
+
+    const safeIndex = tabRoutes[index] ? index : 0;
+    setActiveTab(safeIndex);
+
+    window.setTimeout(() => {
+      window.location.href = tabRoutes[safeIndex];
+    }, 160);
+  };
+
+  function wireDashboardButtons() {
+    document.querySelectorAll('.tab-button').forEach((button, index) => {
+      if (button.dataset.tabWired === 'true') return;
+      button.dataset.tabWired = 'true';
+
+      button.addEventListener('click', (event) => {
+        if (event.defaultPrevented) return;
+        window.switchTab(event, index);
+      });
+    });
+
+    document.querySelectorAll('.action-btn').forEach((button) => {
+      if (button.dataset.actionWired === 'true') return;
+      if (!button.textContent.trim().toLowerCase().includes('debuggings')) return;
+
+      button.dataset.actionWired = 'true';
+      button.addEventListener('click', () => {
+        window.location.href = 'mybug.html';
+      });
+    });
+
+    document.querySelectorAll('.apply-btn-card').forEach((button) => {
+      if (button.dataset.applyWired === 'true') return;
+
+      button.dataset.applyWired = 'true';
+      button.addEventListener('click', () => {
+        window.location.href = 'bug.html';
+      });
+    });
+  }
+
+  function initDashboardNav() {
+    setActiveTab(getCurrentTabIndex());
+    wireDashboardButtons();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDashboardNav);
+  } else {
+    initDashboardNav();
+  }
+})();

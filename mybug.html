@@ -6,146 +6,425 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Moderustic&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Bug Bounty</title>
+    <title>My Bugs - Bug Bounty</title>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/stylemobile.css">
     <link rel="stylesheet" href="css/mybug.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <div class="fullpage">
         <div id="cursor-border"></div>
-        <!-- <div class="page-hide"> -->
-<div class="nav-div">
-    <nav>
-        <div class="bar">
-            <div class="bar-elements">
-              <div class="mob-nav-ele">
-                <p class="nav-logo"><span>BUG</span> <span>BOUNTY</span></p>
-              </div>
-              
-                <div class="bar-ele-but">
-                    <div class="left">
-                        <h4><a href="index.html" class="active" style="text-decoration: none; color: #ffffff;">Home</a></h4>
-                        <h4><a href="#" style="text-decoration: none; color: #ffffff;">My Bugs</a></h4>
-                    </div>
-                    <div class="center">
-                      <img class="img-logo" src="images/logo.png" alt="logo">
-                  </div>
-                    <div class="right">
-                        <h4><a href="#faq-section" style="text-decoration: none; color: #ffffff;">FAQ</a></h4>
-                        <button id="discoverButton" class="ui-btn">
-                          <span>
-                            Dashboard
-                          </span>
-                        </button>
-                            <!-- <h4><a style="text-decoration: none; color: #02cccc; font-size: 1.08rem; font-weight: 900;" href="#"><b>Go to Dashboard</b></a></h4> -->
 
+        <div class="nav-div">
+            <nav>
+                <div class="bar">
+                    <div class="bar-elements">
+                        <div class="mob-nav-ele">
+                            <p class="nav-logo"><span>BUG</span> <span>BOUNTY</span></p>
+                        </div>
+                        <div class="bar-ele-but">
+                            <div class="left">
+                                <h4><a href="index.html" style="text-decoration: none; color: #ffffff;">Home</a></h4>
+                                <h4><a href="discover.html" style="text-decoration: none; color: #ffffff;">Discover</a></h4>
+                                <h4><a href="bounties.html" style="text-decoration: none; color: #ffffff;">Bounties</a></h4>
+                            </div>
+                            <div class="center">
+                                <img onclick="window.location.href='discover.html'" class="img-logo" src="images/logo.png" alt="logo">
+                            </div>
+                            <div class="right">
+                                <h4><a href="mybug.html" class="active" style="text-decoration: none; color: #02cccc;">My Bugs</a></h4>
+                                <h4><a href="profile.html" style="text-decoration: none; color: #ffffff;">Profile</a></h4>
+                                <button id="discoverButton" class="ui-btn">
+                                    <span>Dashboard</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </nav>
         </div>
-      </nav>
-      </div>
 
-    <main class="mybug-main">
-      <section class="mybug-header">
-        <h1 class="mybug-title">My Bugs & Programs</h1>
-        <p class="mybug-desc">Track your progress and status in bug bounty programs.</p>
-      </section>
-      <section class="mybug-list">
-        <div class="mybug-item">
-          <span class="mybug-name">Login Page XSS</span>
-          <span class="mybug-status active">Active</span>
-          <button class="mybug-btn" onclick="window.location.href='bug.html'">View</button>
-          <button class="mybug-details-btn" onclick="window.location.href='bug.html'">Details</button>
-        </div>
-        <div class="mybug-item">
-          <span class="mybug-name">API Rate Limit Bypass</span>
-          <span class="mybug-status review">Under Review</span>
-          <button class="mybug-btn" onclick="window.location.href='bug.html'">View</button>
-          <button class="mybug-details-btn" onclick="window.location.href='bug.html'">Details</button>
-        </div>
-        <div class="mybug-item">
-          <span class="mybug-name">SQL Injection in Reports</span>
-          <span class="mybug-status completed">Completed</span>
-          <button class="mybug-btn" onclick="window.location.href='bug.html'">View</button>
-          <button class="mybug-details-btn" onclick="window.location.href='bug.html'">Details</button>
-        </div>
-        <div class="mybug-item">
-          <span class="mybug-name">Broken Authentication</span>
-          <span class="mybug-status active">Active</span>
-          <button class="mybug-btn" onclick="window.location.href='bug.html'">View</button>
-          <button class="mybug-details-btn" onclick="window.location.href='bug.html'">Details</button>
-        </div>
-      </section>
-    </main>
+        <main class="mybug-main">
+            <section class="mybug-header">
+                <div class="header-content">
+                    <div class="header-copy">
+                        <!-- <p class="mybug-kicker">Research workspace</p> -->
+                        <h1 class="mybug-title">My Bug Reports</h1>
+                        <p class="mybug-desc">Track submitted reports, review status, and jump back into active findings.</p>
+                    </div>
+                    <!-- <button class="submit-new-btn" onclick="location.href='newbug.html'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"/>
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                        Submit New Bug
+                    </button> -->
+                </div>
+            </section>
 
-    <hr style="align-items: center; justify-self: center; border: 1.5px solid rgb(255, 255, 255); width: 1536px; border-radius: 5px;">
-    <footer>
-        <div class="footer-container">
-          <div class="footer-logo">
-            <img src="images/footer-vec.png" alt="footer-vec"/>
-          </div>
-          <div class="footer-txt-link">
-          <div class="footer-text">
-            <h3>
-              We love <span class="blue">debugging</span><br> and the <span class="orange">experts</span><br> who make it possible.
-            </h3>
-          </div>
-          <div class="footer-links">
-            <div class="community">
-              <h4>Community</h4>
-              <ul>
-                <li><a href="#">Debug the code</a></li>
-                <li><a href="#">Explore the bugs</a></li>
-                <li><a href="#">Code of Conduct</a></li>
-              </ul>
+            <section class="stats-overview" aria-label="Bug report statistics">
+                <div class="stat-box">
+                    <div class="stat-icon total" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"/>
+                            <path d="M7 15v3"/>
+                            <path d="M12 9v9"/>
+                            <path d="M17 5v13"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">Total Submitted</span>
+                        <span class="stat-value" id="totalBugs">0</span>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon active" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="7"/>
+                            <path d="m20 20-4.5-4.5"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">Under Review</span>
+                        <span class="stat-value" id="reviewBugs">0</span>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon accepted" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6 9 17l-5-5"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">Accepted</span>
+                        <span class="stat-value" id="acceptedBugs">0</span>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon resolved" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v6"/>
+                            <path d="m5 5 4 4"/>
+                            <path d="m19 5-4 4"/>
+                            <path d="M5 13h14"/>
+                            <path d="m7 17 3-3 2 2 5-5"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">Resolved</span>
+                        <span class="stat-value" id="resolvedBugs">0</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="filters-section" aria-label="Bug report filters">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Bugs</button>
+                    <button class="filter-tab" data-filter="SUBMITTED">Submitted</button>
+                    <button class="filter-tab" data-filter="review">Under Review</button>
+                    <button class="filter-tab" data-filter="ACCEPTED">Accepted</button>
+                    <button class="filter-tab" data-filter="resolved">Resolved</button>
+                </div>
+                <label class="search-box" for="searchInput">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search bugs...">
+                </label>
+            </section>
+
+            <section class="mybug-list" id="bugList" aria-live="polite">
+                <div class="loading-state">
+                    <div class="loader"></div>
+                    <p>Loading your bug reports...</p>
+                </div>
+            </section>
+
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8 2v3"/>
+                        <path d="M16 2v3"/>
+                        <rect x="6" y="5" width="12" height="15" rx="6"/>
+                        <path d="M3 10h3"/>
+                        <path d="M18 10h3"/>
+                        <path d="M3 15h3"/>
+                        <path d="M18 15h3"/>
+                        <path d="M10 9h.01"/>
+                        <path d="M14 9h.01"/>
+                    </svg>
+                </div>
+                <h3>No Bugs Found</h3>
+                <p>You haven't submitted any bug reports yet. Start hunting!</p>
+                <button class="submit-new-btn" onclick="location.href='newbug.html'">
+                    Submit Your First Bug
+                </button>
             </div>
-            <div class="quick-links">
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Discord</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">Telegram</a></li>
-              </ul>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="images/footer-vec.png" alt="footer-vec"/>
+                </div>
+                <div class="footer-txt-link">
+                    <div class="footer-text">
+                        <h3>
+                            We love <span class="blue">debugging</span><br> and the <span class="orange">experts</span><br> who make it possible.
+                        </h3>
+                    </div>
+                    <div class="footer-links">
+                        <div class="community">
+                            <h4>Community</h4>
+                            <ul>
+                                <li><a href="bounties.html">Debug the code</a></li>
+                                <li><a href="discover.html">Explore the bugs</a></li>
+                                <li><a href="index.html#faq-section">Code of Conduct</a></li>
+                            </ul>
+                        </div>
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+                                <li><a href="https://x.com/" target="_blank" rel="noopener">Twitter</a></li>
+                                <li><a href="https://discord.gg/X2X97SZk" target="_blank" rel="noopener">Discord</a></li>
+                            </ul>
+                        </div>
+                        <div class="support">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="index.html#faq-section">Contact us</a></li>
+                                <li><a href="discover.html">Status</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border: 1.5px solid rgb(255, 255, 255); margin-top: 65px; width: 1200px; border-radius: 5px;">
+
+                <div class="footer-bottom">
+                    <p class="logo-footer"><span>BUG</span> <span>BOUNTY</span></p>
+                    <p>Built at BugBusters. Crafted with expertise, passion, and a suite of powerful tools.</p>
+                </div>
+                <div class="footer-bottom-copyright">
+                    <p>&copy; 2024 Bug Bounty Platform</p>
+                </div>
             </div>
-            <div class="support">
-              <h4>Support</h4>
-              <ul>
-                <li><a href="#">Refund Policy</a></li>
-                <li><a href="#">Status</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-            </div>
-          </div>
-          </div>
-      
-          <hr style="border: 1.5px solid rgb(255, 255, 255); margin-top: 65px; width: 1200px; border-radius: 5px;">
-      
-          <div class="footer-bottom">
-      
-            <p class="logo-footer"><span>BUG</span> <span>BOUNTY</span></p>
-            <p>
-              Built at BugBusters. Crafted with expertise, passion, and a suite of
-              powerful tools to help identify and fix vulnerabilities. We are
-              grateful for the contributions of our talented community.
-            </p>
-          </div>
-          <div class="footer-bottom-copyright">
-            <p>@ 2024, XYZ Classic PTE LTD</p>
-          </div>
-        </div>
-      </footer>
-      </div>
-<script src="js/script.js"></script>
-<script src="js/global.js"></script>
-<script src="js/cursor.js"></script>
+        </footer>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/nav-helper.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/global.js"></script>
+
+    <script>
+        const canLoadBugs = requireAuth();
+
+        let allBugs = [];
+        let currentFilter = 'all';
+
+        async function loadBugs() {
+            try {
+                const bugs = await getMyReports();
+                allBugs = Array.isArray(bugs) ? bugs : [];
+
+                updateStats(allBugs);
+                applyFilters();
+            } catch (error) {
+                console.error('Error loading bugs:', error);
+                showEmptyState('Unable to load bug reports', 'Please check that the backend is running and try again.');
+            }
+        }
+
+        function updateStats(bugs) {
+            document.getElementById('totalBugs').textContent = bugs.length;
+            document.getElementById('reviewBugs').textContent = bugs.filter((bug) => bug.status === 'TRIAGED' || bug.status === 'NEEDS_INFO').length;
+            document.getElementById('acceptedBugs').textContent = bugs.filter((bug) => bug.status === 'ACCEPTED').length;
+            document.getElementById('resolvedBugs').textContent = bugs.filter((bug) => bug.status === 'RESOLVED' || bug.status === 'CLOSED').length;
+        }
+
+        function displayBugs(bugs) {
+            const bugList = document.getElementById('bugList');
+            const emptyState = document.getElementById('emptyState');
+
+            if (!bugs || bugs.length === 0) {
+                showEmptyState();
+                return;
+            }
+
+            emptyState.style.display = 'none';
+            bugList.innerHTML = bugs.map((bug) => createBugCard(bug)).join('');
+        }
+
+        function createBugCard(bug) {
+            const statusClass = getStatusClass(bug.status);
+            const statusText = formatStatus(bug.status);
+            const severityClass = getSeverityClass(bug.severity);
+            const severityText = bug.severity || 'MEDIUM';
+            const bugId = bug.id || '';
+            const shortId = bug.referenceCode || (bugId ? bugId.substring(0, 8) : 'pending');
+            const programName = bug.program?.name || bug.program?.company?.name || bug.programId || 'General program';
+            const createdAt = bug.createdAt ? new Date(bug.createdAt) : null;
+            const date = createdAt && !Number.isNaN(createdAt.getTime()) ? createdAt.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            }) : 'Date pending';
+            const description = bug.description || bug.summary || 'No description provided';
+            const trimmedDescription = description.length > 150
+                ? `${description.substring(0, 150)}...`
+                : description;
+
+            return `
+                <div class="bug-card" data-status="${escapeHtml(bug.status || '')}">
+                    <div class="bug-card-header">
+                        <div class="bug-info">
+                            <h3 class="bug-title">${escapeHtml(bug.title || 'Untitled Bug')}</h3>
+                            <p class="bug-program">${escapeHtml(programName)}</p>
+                        </div>
+                        <div class="bug-badges">
+                            <span class="severity-badge ${severityClass}">${escapeHtml(severityText)}</span>
+                            <span class="status-badge ${statusClass}">${escapeHtml(statusText)}</span>
+                        </div>
+                    </div>
+                    <div class="bug-card-body">
+                        <p class="bug-description">${escapeHtml(trimmedDescription)}</p>
+                    </div>
+                    <div class="bug-card-footer">
+                        <div class="bug-meta">
+                            <span class="bug-date">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                ${escapeHtml(date)}
+                            </span>
+                            <span class="bug-id">ID: ${escapeHtml(shortId)}</span>
+                        </div>
+                        <button class="view-btn" data-bug-id="${escapeHtml(bugId)}" ${bugId ? '' : 'disabled'}>
+                            View Details
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            })[char]);
+        }
+
+        function getStatusClass(status) {
+            const statusMap = {
+                'SUBMITTED': 'status-submitted',
+                'TRIAGED': 'status-review',
+                'NEEDS_INFO': 'status-review',
+                'ACCEPTED': 'status-accepted',
+                'RESOLVED': 'status-resolved',
+                'CLOSED': 'status-resolved',
+                'DUPLICATE': 'status-duplicate',
+                'REJECTED': 'status-rejected'
+            };
+            return statusMap[status] || 'status-submitted';
+        }
+
+        function formatStatus(status) {
+            const statusText = {
+                'SUBMITTED': 'Submitted',
+                'TRIAGED': 'Under Review',
+                'NEEDS_INFO': 'Needs Info',
+                'ACCEPTED': 'Accepted',
+                'RESOLVED': 'Resolved',
+                'CLOSED': 'Closed',
+                'DUPLICATE': 'Duplicate',
+                'REJECTED': 'Rejected'
+            };
+            return statusText[status] || status || 'Submitted';
+        }
+
+        function getSeverityClass(severity) {
+            const severityMap = {
+                'LOW': 'severity-low',
+                'MEDIUM': 'severity-medium',
+                'HIGH': 'severity-high',
+                'CRITICAL': 'severity-critical'
+            };
+            return severityMap[severity] || 'severity-medium';
+        }
+
+        function showEmptyState(title = 'No Bugs Found', message = "You haven't submitted any bug reports yet. Start hunting!") {
+            document.getElementById('bugList').innerHTML = '';
+            document.querySelector('#emptyState h3').textContent = title;
+            document.querySelector('#emptyState p').textContent = message;
+            document.getElementById('emptyState').style.display = 'flex';
+        }
+
+        function viewBugDetails(bugId) {
+            if (!bugId) return;
+            window.location.href = `bug.html?id=${encodeURIComponent(bugId)}`;
+        }
+
+        function matchesFilter(bug) {
+            if (currentFilter === 'all') return true;
+            if (currentFilter === 'review') return bug.status === 'TRIAGED' || bug.status === 'NEEDS_INFO';
+            if (currentFilter === 'resolved') return bug.status === 'RESOLVED' || bug.status === 'CLOSED';
+            return bug.status === currentFilter;
+        }
+
+        function applyFilters() {
+            const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+            const filtered = allBugs.filter((bug) => {
+                const searchableText = [
+                    bug.title,
+                    bug.summary,
+                    bug.description,
+                    bug.referenceCode,
+                    bug.id,
+                    bug.program?.name,
+                    bug.program?.company?.name,
+                ].filter(Boolean).join(' ').toLowerCase();
+
+                return matchesFilter(bug) && (!searchTerm || searchableText.includes(searchTerm));
+            });
+
+            displayBugs(filtered);
+        }
+
+        document.querySelectorAll('.filter-tab').forEach((tab) => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tab').forEach((item) => item.classList.remove('active'));
+                tab.classList.add('active');
+                currentFilter = tab.getAttribute('data-filter');
+                applyFilters();
+            });
+        });
+
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+        document.getElementById('bugList').addEventListener('click', (event) => {
+            const button = event.target.closest('.view-btn');
+            if (!button || button.disabled) return;
+            viewBugDetails(button.dataset.bugId);
+        });
+
+        if (canLoadBugs) {
+            loadBugs();
+        }
+    </script>
 </body>
 </html>

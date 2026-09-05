@@ -462,6 +462,22 @@
 </div>
 </div>
 
+<script src="js/auth.js"></script>
+<script src="js/nav-helper.js"></script>
+<script>
+// Protect this page - require authentication
+requireAuth();
+
+// Load and display current user info
+const user = getUser();
+if (user) {
+    // Update profile name in nav
+    const profileNameElem = document.querySelector('.profile-icon h4 a');
+    if (profileNameElem) {
+        profileNameElem.textContent = user.name;
+    }
+}
+</script>
 <script src="js/script.js"></script>
 <script src="js/global.js"></script>
 <script src="js/cursor.js"></script>
